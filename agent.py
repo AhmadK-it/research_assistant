@@ -4,7 +4,7 @@ from google.adk.tools import google_search, AgentTool, ToolContext
 from google.adk.tools.mcp_tool.mcp_toolset import McpToolset
 from google.adk.tools.mcp_tool.mcp_session_manager import StdioConnectionParams
 from google.adk.models.google_llm import Gemini
-
+from google.adk.tools.function_tool import FunctionTool
 
 from mcp import StdioServerParameters
 import os
@@ -21,7 +21,7 @@ from .agents.gap_agent import create_gap_agent
 from .agents.synthesis_agent import create_synthesis_agent
 from .utils.logger import setup_logger
 from .tools.init_handler import setup_retry_config, create_specialist_agents
-
+from .tools.hitl_handler import conduct_adaptive_gap_search
 logger = setup_logger("ResearchAssistant initialization", level=logging.INFO)
 
 MCP_SERVER_PATH = os.path.join(
@@ -62,12 +62,16 @@ root_agent = Agent(
     You're prohibited from performing searches or generating content directly.
     Your job is to route the user's research query to the 4-phase Adaptive Research Orchestrator workflow.
 
-    The orchestrator should do:
+    When users request to do a research:
     1. Execute initial broad searches
     2. Assess quality of sources
     3. Identify information gaps
     4. Generate comprehensive final report
-    5. Provide the report to the user
+    5. Use the conduct_adaptive_gap_search tool with the found gaps and get additional information to fill the gaps
+    6. If the gap research status is 'pending', inform the user that approval is required
+    7. After receiving the final result, do your work and then provide the final report to the user
+    4. Keep responses concise but informative
+    5. Provide the report to the user yourself once synthesis is complete even if he rejected the adaptiv gap research
 
 
     You demonstrate true agentic behavior through:
@@ -87,6 +91,7 @@ root_agent = Agent(
         AgentTool(agent=search_agent),
         AgentTool(agent=quality_agent),
         AgentTool(agent=gap_agent),
-        AgentTool(agent=synthesis_agent)
+        AgentTool(agent=synthesis_agent),
+        FunctionTool(func=conduct_adaptive_gap_search),
         ]
 )

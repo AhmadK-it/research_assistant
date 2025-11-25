@@ -1,3 +1,6 @@
+from google.adk.tools import google_search, AgentTool, ToolContext
+
+
 """
 TODO 1: intergrate
         async def _phase_4_hitl(self, gaps):
@@ -78,3 +81,51 @@ TODO 1: intergrate
 """
 TODO 2: update instruction to include HITL steps and user notification requirements
 """
+def conduct_adaptive_gap_search(gaps: list, tool_context: ToolContext) -> dict:
+    """
+    Conduct adaptive searches based on identified gaps this bulk action requires approval.
+
+    Args:
+        gaps (list): List of identified information gaps with suggested queries.
+        tool_context (ToolContext): Contextual information for the tool execution.
+    Returns:
+        dict: Search results or status message.
+    """
+    # Placeholder implementation
+    results = []
+    
+    
+    # SCENARIO 1: No gaps provided
+    if not gaps:
+        return {
+            'status': 'completed',
+            'message': 'No gaps provided for adaptive search.',
+        }
+    
+    # SCENARIO 2: Gaps provided - And this is the first time the tool is called. Large operation needs approval
+    
+    if not tool_context.tool_confirmation:
+        tool_context.request_confirmation(
+            hint=f"⚠️ Bulk research to conduct: {len(gaps)} gaps in previous research. Do you want to approve?",
+            payload={"num_gaps": len(gaps)},
+        )
+        return {  # This is sent to the Agent
+            "status": "pending",
+            "message": f"Bulk action for {len(gaps)} gaps requires approval",
+        }    
+    
+        # -----------------------------------------------------------------------------------------------
+    # -----------------------------------------------------------------------------------------------
+    # SCENARIO 3: The tool is called AGAIN and is now resuming. Handle approval response - RESUME here.    
+    if tool_context.tool_confirmation.confirmed:
+        return {
+            "status": "approved",
+            "message": f"Approval received for conducting adaptive searches for {len(gaps)} gaps.",
+            "gaps": gaps,
+        }
+    else:
+        return {
+            "status": "rejected",
+            "message": "Adaptive gap search denied by user.",
+        }
+    
