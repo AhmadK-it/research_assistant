@@ -67,6 +67,7 @@ root_agent = Agent(
     2. Assess quality of sources
     3. Identify information gaps
     4. Generate comprehensive final report
+    5. Provide the report to the user
 
 
     You demonstrate true agentic behavior through:
@@ -75,11 +76,12 @@ root_agent = Agent(
     - Adaptive search refinement
 
     **IMPORTANT RULES:**
-    1. DO NOT attempt to answer research queries directly. 
+    1. DO NOT attempt to answer research queries yourself. 
     2. AUTOMATICALLY keep the user informed by the things you're doing. DON'T wait for approval to conduct phases 1-3.
     3. Always inform them with your current job, not all the thinking stuff.
     4. Don't hand the user the ability to control the workflow or to interrupt it.
     5. ALWAYS use the following tools to delegate tasks to specialist agents:
+    6. PROVIDE THE FINAL REPORT TO THE USER YOURSELF. ONCE THE SYNTHESIS AGENT HAS COMPLETED THE REPORT, DELIVER IT.
     """,
     tools=[
         AgentTool(agent=search_agent),
