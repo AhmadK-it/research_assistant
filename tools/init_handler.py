@@ -36,7 +36,7 @@ def create_specialist_agents(retry_config: types.HttpRetryOptions, search_toolse
         quality_agent = create_quality_agent(model='gemini-2.5-flash-lite', retry_config=retry_config)
 
         logger.info("Creating Gap Agent...")
-        gap_agent = create_gap_agent(model='gemini-2.5-flash-lite', retry_config=retry_config)
+        gap_agent = create_gap_agent(retry_config=retry_config, search_toolset=search_toolset)
         
         logger.info("Creating Synthesis Agent...")
         synthesis_agent = create_synthesis_agent(model='gemini-2.5-flash-lite', retry_config=retry_config)

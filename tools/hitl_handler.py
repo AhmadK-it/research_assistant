@@ -1,5 +1,3 @@
-from google.adk.tools import google_search, AgentTool, ToolContext
-
 
 """
 TODO 1: intergrate
@@ -81,51 +79,115 @@ TODO 1: intergrate
 """
 TODO 2: update instruction to include HITL steps and user notification requirements
 """
-def conduct_adaptive_gap_search(gaps: list, tool_context: ToolContext) -> dict:
+from google.adk.tools import ToolContext
+from typing import Dict, Any, List
+from ..utils.logger import setup_logger
+import logging
+
+logger = setup_logger("HITL-Handler", level=logging.INFO)
+
+
+def conduct_adaptive_gap_search(
+    gaps: List[Dict[str, Any]], 
+    tool_context: ToolContext
+) -> Dict[str, Any]:
     """
-    Conduct adaptive searches based on identified gaps this bulk action requires approval.
+    Conduct adaptive searches based on identified gaps.
+    This bulk action requires approval.
 
     Args:
         gaps (list): List of identified information gaps with suggested queries.
         tool_context (ToolContext): Contextual information for the tool execution.
+        
     Returns:
-        dict: Search results or status message.
+        dict: Search results or status message with execution instructions.
     """
-    # Placeholder implementation
-    results = []
-    
-    
-    # SCENARIO 1: No gaps provided
+    logger.info("Conducting adaptive gap search...")
+    # ----------------------------------------------------------------------
+    # SCENARIO 1: No gaps provided - nothing to do
+    # ----------------------------------------------------------------------
     if not gaps:
+        logger.info("No gaps provided for adaptive search.")
         return {
             'status': 'completed',
             'message': 'No gaps provided for adaptive search.',
+            'requires_action': False
         }
     
-    # SCENARIO 2: Gaps provided - And this is the first time the tool is called. Large operation needs approval
-    
+    # ----------------------------------------------------------------------
+    # SCENARIO 2: First call - request approval for bulk operation
+    # ----------------------------------------------------------------------
     if not tool_context.tool_confirmation:
+        # Format gaps for user display
+        logger.info("Requesting user approval for adaptive gap search...")
+        gap_summary = "\n".join([
+            f"  {i+1}. {gap.get('topic', 'Unknown')}: {gap.get('suggested_query', 'N/A')}"
+            for i, gap in enumerate(gaps[:5])  # Show first 5
+        ])
+        
+        if len(gaps) > 5:
+            gap_summary += f"\n  ... and {len(gaps) - 5} more gaps"
+        
         tool_context.request_confirmation(
-            hint=f"⚠️ Bulk research to conduct: {len(gaps)} gaps in previous research. Do you want to approve?",
-            payload={"num_gaps": len(gaps)},
+            hint=(
+                f"⚠️ Bulk Research Operation Detected\n\n"
+                f"Found {len(gaps)} information gaps that require additional research:\n\n"
+                f"{gap_summary}\n\n"
+                f"This will trigger Phase 1-2 (Search + Quality Assessment) for each gap.\n"
+                f"Approve to proceed?"
+            ),
+            payload={
+                "num_gaps": len(gaps),
+                "gaps": gaps,  # Store gaps in payload for resumption
+                "operation": "adaptive_gap_research"
+            },
         )
-        return {  # This is sent to the Agent
+        
+        # Return pending status - agent will wait for user response
+        return {
             "status": "pending",
-            "message": f"Bulk action for {len(gaps)} gaps requires approval",
-        }    
+            "message": f"Awaiting approval for {len(gaps)} adaptive gap searches.",
+            "requires_action": False,  # Agent should NOT proceed yet
+            "gaps": gaps  # Keep gaps available for agent context
+        }
     
-        # -----------------------------------------------------------------------------------------------
-    # -----------------------------------------------------------------------------------------------
-    # SCENARIO 3: The tool is called AGAIN and is now resuming. Handle approval response - RESUME here.    
+    # ----------------------------------------------------------------------
+    # SCENARIO 3A: User APPROVED - proceed with gap research
+    # ----------------------------------------------------------------------
     if tool_context.tool_confirmation.confirmed:
+        logger.info("User approved adaptive gap search. Proceeding...")
+        # Retrieve gaps from confirmation payload (more reliable)
+        confirmed_gaps = tool_context.tool_confirmation.payload.get('gaps', gaps)
+        
+        # Store in tool context state for agent access
+        tool_context.state['adaptive_gaps'] = confirmed_gaps
+        tool_context.state['gap_research_approved'] = True
+        tool_context.state['gap_research_phase'] = 'executing'
+        
         return {
             "status": "approved",
-            "message": f"Approval received for conducting adaptive searches for {len(gaps)} gaps.",
-            "gaps": gaps,
-        }
-    else:
-        return {
-            "status": "rejected",
-            "message": "Adaptive gap search denied by user.",
+            "message": f"✅ User approved adaptive gap research for {len(confirmed_gaps)} gaps.",
+            "requires_action": True,  # Signal agent to proceed
+            "gaps_to_research": confirmed_gaps,
+            "next_steps": [
+                "For each gap, execute Phase 1 (Search Agent) with gap-specific queries",
+                "Then execute Phase 2 (Quality Agent) to assess source quality",
+                "Skip Phase 3 (Gap Agent) - we don't need gaps for gaps",
+                "Incorporate results into final synthesis"
+            ]
         }
     
+    # ----------------------------------------------------------------------
+    # SCENARIO 3B: User REJECTED - skip gap research
+    # ----------------------------------------------------------------------
+    else:
+        logger.info("User rejected adaptive gap search. Skipping...")
+        tool_context.state['gap_research_approved'] = False
+        tool_context.state['gap_research_phase'] = 'rejected'
+        
+        return {
+            "status": "rejected",
+            "message": "❌ User declined adaptive gap research. Proceeding with available information.",
+            "requires_action": False,  # Agent should skip gap research
+            "fallback_action": "proceed_to_synthesis"
+        }
