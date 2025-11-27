@@ -1,4 +1,24 @@
-"""Gap analysis agent for identifying research gaps"""
+"""
+Gap Analysis Agent - Research Completeness Specialist
+
+This module implements the Gap Identifier agent responsible for
+analyzing research results to identify missing or incomplete information.
+
+Part of the multi-agent research system demonstrating:
+- Specialist agent design pattern (single responsibility)
+- Iterative research refinement
+- LLM-powered meta-analysis of search coverage
+
+Architecture Position: Phase 3 of 5-phase workflow
+    [Search] → [Quality] → [Gap] → [HITL] → [Synthesis]
+                            ↑ YOU ARE HERE
+
+Key Feature: This agent's output feeds into the HITL (Human-in-the-Loop)
+confirmation step, where users can approve or reject suggested gap searches.
+
+Author: Research Agent Capstone Project
+Course: Google AI Agents Intensive (Nov 2025)
+"""
 
 from google.adk.agents import Agent
 import logging
@@ -7,54 +27,55 @@ from google.adk.models.google_llm import Gemini
 logger = logging.getLogger(__name__)
 
 
-"""
-TODO: below method to be integrated into search agent below as functional tool as how it is important
-
-        async def _phase_3_gaps(self):
-        ""Analyze information gaps and completeness""
-        logger.info("Gap Agent → Analyzing completeness")
+def create_gap_agent( model='gemini-2.5-flash-lite', retry_config=None, search_toolset=None, generation_config=None) -> Agent:
+    """
+    Creates the Gap Identifier agent for finding missing information.
+    
+    This agent is responsible for Phase 3 of the research workflow:
+    1. Analyzing search results and quality assessments
+    2. Identifying 5 dimensions of potential gaps:
+       - Temporal: Missing recent developments or historical context
+       - Topical: Uncovered subtopics or perspectives
+       - Methodological: Missing data types (quantitative/qualitative)
+       - Source: Gaps in authoritative or diverse sources
+       - Practical: Missing implementation or real-world details
+    3. Prioritizing gaps by importance (high/medium/low)
+    4. Generating optimized search queries to fill each gap
+    
+    Output Format:
+        Returns JSON array of gap objects with fields:
+        - topic: Brief description of what's missing
+        - suggested_query: Optimized search query
+        - priority: high/medium/low
+        - rationale: Why this gap matters
+        - gap_type: One of the 5 dimensions
+    
+    Args:
+        retry_config: Retry configuration for API resilience
+        search_toolset: DEPRECATED - No longer used to prevent nested agent call errors
+        generation_config: LLM generation parameters
+    
+    Returns:
+        Agent: Configured gap analysis specialist
         
-        prompt = f""Research Question: {self.research_state['query']}
-
-        Current findings summary:
-        - High quality sources: {len(self.research_state['high_quality_results'])}
-        - Search iterations: {self.research_state['iteration_count']}
-
-        Analyze:
-        1. Is this sufficient to answer the question comprehensively?
-        2. What specific information is missing?
-        3. What additional searches would help?
-
-        Return in JSON format with critical_gaps and recommendation.
-        ""
+    Note:
+        The Gap Agent does NOT have search tools. It ONLY identifies gaps.
+        Actual gap research is performed by the coordinator in Phase 4,
+        which calls search_specialist directly for each approved gap.
+        This design prevents nested AgentTool calls that cause NoneType errors.
         
-        response = await self._invoke_agent(self.gap_agent, prompt)
-        
-        gaps = {
-            'assessment': 'Mostly Complete',
-            'critical_gaps': [
-                {
-                    'gap': 'Need more recent sources from 2024',
-                    'suggested_query': f"{self.research_state['query']} 2024 recent",
-                    'importance': 'Current information is critical'
-                }
-            ],
-            'recommendation': 'Suggest additional search for completeness',
-            'agent_analysis': str(response)
-        }
-        
-        self.research_state['gaps_identified'] = gaps
-        logger.info(f"✓ Gap analysis: {gaps['assessment']}")
-        return gaps
-
-        
-"""
-
-def create_gap_agent(retry_config=None, search_toolset=None) -> Agent:
-    """Creates agent for identifying missing information in research coverage"""
+    Integration with HITL:
+        The gaps identified by this agent are presented to users via
+        the conduct_adaptive_gap_search tool, which asks for confirmation
+        before executing additional searches.
+    """
     
     return Agent(
-        model=Gemini(model='gemini-2.5-flash-lite', retry_options=retry_config),
+        model=Gemini(
+            model='gemini-2.5-flash-lite', 
+            retry_options=retry_config,
+            generation_config=generation_config
+        ),
         name='gap_identifier',
         description='Expert at identifying what information is missing',
         instruction="""
@@ -200,68 +221,5 @@ def create_gap_agent(retry_config=None, search_toolset=None) -> Agent:
         
         ═══════════════════════════════════════════════════════════════════════
         """,
-        tools=[search_toolset] if search_toolset else []
+        tools=[]  # No tools - Gap Agent only identifies gaps, doesn't search
     )
-#         You are a research gap analyst. Your job is to:
-
-#         1. Review the research question and what's been found so far
-#         2. Identify what's MISSING to fully answer the question
-#         3. Categorize gaps:
-#         - Critical gaps (without this, we can't answer the question) - Priority: high
-#         - Important gaps (would significantly improve the answer) - Priority: medium
-#         - Nice-to-have gaps (would add depth but not essential) - Priority: low
-
-#         4. For each gap, suggest:
-#         - Specific search queries to fill it
-#         - What type of source would be ideal (academic, news, technical, etc.)
-#         - Why this gap matters
-
-#         5. Output format:
-#             [
-#             {
-#                 "topic": "Description of what's missing",
-#                 "suggested_query": "Specific search query to fill gap",
-#                 "source_type": "Type of source needed",
-#                 "importance": "Why this matters",
-#                 "priority": "high / medium / low"
-#             }
-#             ]
-
-#         Be specific and actionable in your recommendations.
-
-#         EXAMPLE_GAP_RESPONSE =
-#         [
-#             {
-#                 "topic": "Long-term healthcare outcomes",
-#                 "suggested_query": "AI healthcare outcomes longitudinal studies 2023-2024",
-#                 "priority": "high",
-#                 "rationale": "Initial research lacked outcome data beyond 6 months"
-#             },
-#             {
-#                 "topic": "Cost-benefit analysis",
-#                 "suggested_query": "AI healthcare implementation costs ROI analysis",
-#                 "priority": "medium",
-#                 "rationale": "No financial impact data found in initial sources"
-#             }
-#         ]
-#         "",
-#     )
-    
-
-# from google.adk.agents import Agent
-# from google.adk.models.google_llm import Gemini
-
-
-# def create_gap_agent(retry_config, search_toolset):
-#     """
-#     Create gap analysis agent with structured output format.
-    
-#     This ensures gaps are properly formatted for the HITL workflow.
-#     """
-    
-#     gap_agent = Agent(
-#         model=Gemini(model='gemini-2.5-flash-lite', retry_options=retry_config),
-#         name='gap_agent',
-#         description='Identifies information gaps and suggests targeted searches',
-#         instruction="""
-        
