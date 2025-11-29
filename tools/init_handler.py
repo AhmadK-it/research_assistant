@@ -1,7 +1,7 @@
 """
-Agent Initialization Handler - Factory for Specialist Agents
+Agent Initialization Handler - Factory for All Agents
 
-This module provides factory functions to create and configure all specialist
+This module provides the single factory function to create and configure ALL
 agents used in the Research Agent system.
 
 ═══════════════════════════════════════════════════════════════════════════════
@@ -18,11 +18,15 @@ Centralizing agent creation provides:
 AGENT ROSTER
 ═══════════════════════════════════════════════════════════════════════════════
 
+LlmAgents:
 1. Search Agent    - Web search via MCP DuckDuckGo
 2. Quality Agent   - Source credibility assessment
 3. Gap Agent       - Information completeness analysis
-4. Synthesis Agent - LlmAgent with AgentTool:
-   └─ Uses AgentTool(formatter) → Code-based formatting (BuiltInCodeExecutor)
+4. Synthesis Agent - Report generation with AgentTool(formatter)
+
+Pipelines:
+5. Search+Quality Pipeline - SequentialAgent (Search → Quality)
+6. Parallel Gap Agent      - ParallelAgent (3 fixed slots)
 
 Author: Research Agent Capstone Project
 Course: Google AI Agents Intensive (Nov 2025)
@@ -33,6 +37,8 @@ from ..agents.search_agent import create_search_agent
 from ..agents.quality_agent import create_quality_agent
 from ..agents.gap_agent import create_gap_agent
 from ..agents.synthesis_agent import create_synthesis_agent
+from ..agents.search_quality_pipeline import create_search_quality_pipeline
+from ..agents.parallel_gap_agent import create_parallel_gap_agent
 import logging
 from ..utils.logger import setup_logger
 
@@ -92,19 +98,28 @@ def setup_generation_config(
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# AGENT FACTORY
+# UNIFIED AGENT FACTORY
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def create_specialist_agents(
-    model: str = 'gemini-2.5-flash-lite', 
+def create_all_agents(
+    model: str = 'gemini-2.5-flash', 
     retry_config: types.HttpRetryOptions = None, 
     search_toolset = None, 
     generation_config = None
 ):
     """
-    Create all specialist agents with consistent configuration.
+    Create ALL agents with consistent configuration.
     
-    Demonstrates: Factory pattern for agent creation
+    ═══════════════════════════════════════════════════════════════════════════
+    COURSE CONCEPT: Unified Factory Pattern
+    ═══════════════════════════════════════════════════════════════════════════
+    
+    This single factory creates:
+    - 4 LlmAgents (search, quality, gap, synthesis)
+    - 1 SequentialAgent (search_quality_pipeline)
+    - 1 ParallelAgent (parallel_gap_agent with 3 slots)
+    
+    All agents share the same configuration for consistency.
     
     Args:
         model: The LLM model to use for all agents
@@ -113,12 +128,20 @@ def create_specialist_agents(
         generation_config: Generation parameters
         
     Returns:
-        Tuple of (search_agent, quality_agent, gap_agent, synthesis_agent)
-        
-    Note:
-        - Gap Agent does NOT receive search_toolset to prevent nested AgentTool errors
-        - Synthesis Agent is a SequentialAgent (Collector → Formatter pipeline)
+        Dict with all agents:
+        {
+            'search': LlmAgent,
+            'quality': LlmAgent,
+            'gap': LlmAgent,
+            'synthesis': LlmAgent,
+            'search_quality_pipeline': SequentialAgent,
+            'parallel_gap_agent': ParallelAgent,
+        }
     """
+    
+    # ─────────────────────────────────────────────────────────────────────────
+    # LlmAgents (4 specialists)
+    # ─────────────────────────────────────────────────────────────────────────
     
     logger.info("Creating Search Agent...")
     search_agent = create_search_agent(
@@ -135,21 +158,52 @@ def create_specialist_agents(
         generation_config=generation_config
     )
     
-    # NOTE: Gap Agent does NOT get search_toolset to avoid nested AgentTool calls
     logger.info("Creating Gap Agent...")
     gap_agent = create_gap_agent(
         model=model,
         retry_config=retry_config, 
-        search_toolset=None,
+        search_toolset=None,  # No search tool to avoid nested AgentTool
         generation_config=generation_config
     )
     
-    # Synthesis Agent has AgentTool(formatter) with BuiltInCodeExecutor
-    logger.info("Creating Synthesis Agent with Formatter Tool...")
+    logger.info("Creating Synthesis Agent...")
     synthesis_agent = create_synthesis_agent(
         model=model, 
         retry_config=retry_config, 
         generation_config=generation_config
     )
     
-    return search_agent, quality_agent, gap_agent, synthesis_agent
+    # ─────────────────────────────────────────────────────────────────────────
+    # SequentialAgent (Search → Quality pipeline)
+    # ─────────────────────────────────────────────────────────────────────────
+    
+    logger.info("Creating Search+Quality Pipeline (SequentialAgent)...")
+    search_quality_pipeline = create_search_quality_pipeline(
+        model=model,
+        retry_config=retry_config,
+        search_toolset=search_toolset,
+        generation_config=generation_config
+    )
+    
+    # ─────────────────────────────────────────────────────────────────────────
+    # ParallelAgent (3 fixed slots for gap research)
+    # ─────────────────────────────────────────────────────────────────────────
+    
+    logger.info("Creating Parallel Gap Agent (ParallelAgent with 3 slots)...")
+    parallel_gap_agent = create_parallel_gap_agent(
+        model=model,
+        retry_config=retry_config,
+        search_toolset=search_toolset,
+        generation_config=generation_config
+    )
+    
+    logger.info("✅ All agents created successfully")
+    
+    return {
+        'search': search_agent,
+        'quality': quality_agent,
+        'gap': gap_agent,
+        'synthesis': synthesis_agent,
+        'search_quality_pipeline': search_quality_pipeline,
+        'parallel_gap_agent': parallel_gap_agent,
+    }

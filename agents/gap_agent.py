@@ -165,10 +165,11 @@ def create_gap_agent( model='gemini-2.5-flash-lite', retry_config=None, search_t
         ✗ Duplicates existing coverage
         
         **Gap Limit:**
-        - Identify 3-8 gaps maximum
+        - ALWAYS identify EXACTLY 3 gaps (for parallel research)
         - Prioritize quality over quantity
-        - If fewer than 3 meaningful gaps exist, that's fine
-        - If no significant gaps exist, return an empty array: []
+        - Choose the 3 most important/actionable gaps
+        - If fewer than 3 meaningful gaps exist, include lower-priority ones
+        - If research is comprehensive, identify refinement opportunities
         
         ═══════════════════════════════════════════════════════════════════════
         📌 EXAMPLES

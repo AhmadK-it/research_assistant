@@ -13,18 +13,20 @@ An **autonomous multi-agent research orchestrator** built with Google's Agent De
 
 ## 🏆 Course Concepts Demonstrated
 
-This project showcases **6+ key concepts** from the Google AI Agents Intensive:
+This project showcases **8+ key concepts** from the Google AI Agents Intensive:
 
 | Concept | Implementation | File(s) |
 |---------|---------------|---------|
-| **Multi-Agent Systems** | 4 specialist agents + 1 coordinator using AgentTool pattern | `agent.py`, `agents/*.py` |
+| **Multi-Agent Systems** | 5 specialist agents + 1 coordinator using AgentTool pattern | `agent.py`, `agents/*.py` |
+| **SequentialAgent** | Search+Quality pipeline chains 2 agents automatically | `agents/search_quality_pipeline.py` |
+| **AgentTool (Nested Agents)** | Synthesis → Formatter delegation with AgentTool | `agents/synthesis_agent.py` |
+| **BuiltInCodeExecutor** | Code-based report formatting in Formatter Agent | `agents/formatter_agent.py` |
 | **MCP (Model Context Protocol)** | DuckDuckGo search integration via FastMCP server | `mcp_server/search_server.py` |
 | **Human-in-the-Loop (HITL)** | User approval for gap research via `request_confirmation` | `tools/hitl_handler.py` |
 | **Session Management** | InMemorySessionService for conversation state | `agent.py` |
 | **Logging & Observability** | Structured logging with file output | `utils/logger.py` |
-| **Sequential Agents** | 5-phase workflow executed in order | `agent.py` instructions |
 | **Resumability** | ResumabilityConfig for long-running operations | `agent.py` |
-| **Gemini Models** | All agents use gemini-2.5-flash-lite | Throughout |
+| **Gemini Models** | gemini-2.5-flash (main), gemini-2.5-flash-lite (lightweight) | Throughout |
 
 ---
 
@@ -132,20 +134,27 @@ The system leverages Google's Gemini LLM models and integrates with DuckDuckGo f
 ## 🏗 Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                        ROOT AGENT                                │
-│              (Research Orchestrator - LlmAgent)                  │
-│                                                                  │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────────┐    │
-│  │ Search   │  │ Quality  │  │   Gap    │  │  Synthesis   │    │
-│  │ Agent    │  │ Agent    │  │  Agent   │  │   Agent      │    │
-│  └────┬─────┘  └──────────┘  └──────────┘  └──────────────┘    │
-│       │                                                          │
-│       ▼                                                          │
-│  ┌─────────────────────────────────────────────────────────┐    │
-│  │              MCP Server (DuckDuckGo Search)              │    │
-│  └─────────────────────────────────────────────────────────┘    │
-└─────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                            ROOT AGENT                                        │
+│                  (Research Orchestrator - LlmAgent)                          │
+│                                                                              │
+│  ┌─────────────────────────┐                                                │
+│  │  Search+Quality Pipeline │   ← SequentialAgent (auto-chains 2 agents)    │
+│  │  (SequentialAgent)       │                                                │
+│  │   ├─ Search Agent        │                                                │
+│  │   └─ Quality Agent       │                                                │
+│  └─────────────────────────┘                                                │
+│                                                                              │
+│  ┌──────────┐  ┌────────────────────────────────────────────┐              │
+│  │   Gap    │  │           Synthesis Agent                   │              │
+│  │  Agent   │  │   └─ AgentTool(Formatter) ← BuiltInCode     │              │
+│  └──────────┘  └────────────────────────────────────────────┘              │
+│                                                                              │
+│       ▼                                                                      │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │                 MCP Server (DuckDuckGo Search)                       │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────────────────────────────┘
                               │
                               ▼
                     ┌─────────────────┐
@@ -153,6 +162,14 @@ The system leverages Google's Gemini LLM models and integrates with DuckDuckGo f
                     │ (User Approval) │
                     └─────────────────┘
 ```
+
+### Agent Composition Patterns Used
+
+| Pattern | Example | Description |
+|---------|---------|-------------|
+| **SequentialAgent** | `search_quality_pipeline` | Chains Search → Quality automatically |
+| **AgentTool** | `synthesis_agent` uses `AgentTool(formatter)` | Delegate to nested agent |
+| **BuiltInCodeExecutor** | `formatter_agent` | Execute code for formatting |
 
 ---
 
@@ -236,43 +253,35 @@ async for response in runner.run_async(
 
 ```
 research_agent/
-├── __init__.py              # Package initialization
-├── agent.py                 # Root agent & application setup (main entry)
-├── README.md                # This file
+├── __init__.py                  # Package initialization
+├── agent.py                     # Root agent & application setup (main entry)
+├── README.md                    # This file
 │
-├── agents/                  # Specialist agents
+├── agents/                      # Specialist agents
 │   ├── __init__.py
-│   ├── search_agent.py      # Web search specialist (MCP integration)
-│   ├── quality_agent.py     # Source credibility evaluator
-│   ├── gap_agent.py         # Information gap identifier
-│   └── synthesis_agent.py   # Report generator
+│   ├── search_agent.py          # Web search specialist (MCP integration)
+│   ├── quality_agent.py         # Source credibility evaluator
+│   ├── gap_agent.py             # Information gap identifier
+│   ├── synthesis_agent.py       # Report synthesis (uses AgentTool → formatter)
+│   ├── formatter_agent.py       # Code-based formatting (BuiltInCodeExecutor)
+│   └── search_quality_pipeline.py # SequentialAgent (Search → Quality)
 │
-├── tools/                   # Agent tools & handlers
+├── tools/                       # Agent tools & handlers
 │   ├── __init__.py
-│   ├── init_handler.py      # Agent initialization utilities
-│   └── hitl_handler.py      # Human-in-the-Loop confirmation handler
+│   ├── init_handler.py          # Agent factory with pipeline creation
+│   └── hitl_handler.py          # Human-in-the-Loop confirmation handler
 │
-├── mcp_server/              # MCP search server
+├── mcp_server/                  # MCP search server
 │   ├── __init__.py
-│   └── search_server.py     # DuckDuckGo MCP server (FastMCP)
+│   └── search_server.py         # DuckDuckGo MCP server (FastMCP)
 │
-├── utils/                   # Utility modules
+├── utils/                       # Utility modules
 │   ├── __init__.py
-│   └── logger.py            # Logging configuration
+│   └── logger.py                # Logging configuration
 │
-└── logs/                    # Log files directory
+└── logs/                        # Log files directory
     ├── __init__.py
-    └── chat-sessions/       # Saved conversation sessions
-│
-├── utils/                   # Utility modules
-│   ├── __init__.py
-│   └── logger.py            # Logging configuration
-│
-├── memory/                  # Memory management (planned)
-│   └── __init__.py
-│
-└── logs/                    # Log files directory
-    └── __init__.py
+    └── chat-sessions/           # Saved conversation sessions
 ```
 
 ---
@@ -368,13 +377,15 @@ search_agent = create_search_agent(
 
 ### Agents
 
-| Agent | Description | Tools |
-|-------|-------------|-------|
-| `root_agent` | Research orchestrator | All specialist agents |
-| `search_specialist` | Web search execution | MCP DuckDuckGo |
-| `quality_assessor` | Source evaluation | None |
-| `gap_identifier` | Gap analysis | MCP DuckDuckGo |
-| `research_synthesizer` | Report generation | None |
+| Agent | Type | Description | Tools/Sub-agents |
+|-------|------|-------------|------------------|
+| `root_agent` | LlmAgent | Research orchestrator | All specialist agents + pipeline |
+| `search_quality_pipeline` | **SequentialAgent** | Combined search+quality | search_specialist, quality_assessor |
+| `search_specialist` | LlmAgent | Web search execution | MCP DuckDuckGo |
+| `quality_assessor` | LlmAgent | Source evaluation | None |
+| `gap_identifier` | LlmAgent | Gap analysis | None |
+| `research_synthesizer` | LlmAgent | Report synthesis | AgentTool(formatter) |
+| `formatter_agent` | LlmAgent | Code-based formatting | BuiltInCodeExecutor |
 
 ### Tools
 
@@ -390,7 +401,8 @@ search_agent = create_search_agent(
 from research_agent.tools.init_handler import (
     setup_retry_config,
     setup_generation_config,
-    create_specialist_agents
+    create_specialist_agents,
+    create_search_quality_pipeline_agent  # SequentialAgent factory
 )
 
 # HITL handler
@@ -398,6 +410,16 @@ from research_agent.tools.hitl_handler import conduct_adaptive_gap_search
 
 # Logger
 from research_agent.utils.logger import setup_logger
+
+# Access agents directly
+from research_agent.agent import (
+    root_agent,              # App (for ADK CLI)
+    search_quality_pipeline, # SequentialAgent
+    search_agent,
+    quality_agent,
+    gap_agent,
+    synthesis_agent,
+)
 ```
 
 ---
