@@ -43,8 +43,7 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
-# Logs
-logs/
+# Runtime Logs (keep demo logs, ignore runtime)
 *.log
 
 # Environment
