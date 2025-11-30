@@ -146,7 +146,7 @@ def create_all_agents(
     logger.info("Creating Search Agent...")
     search_agent = create_search_agent(
         model=model, 
-        tools=[search_toolset],
+        tools=[search_toolset],  # MCP DuckDuckGo only
         retry_config=retry_config,
         generation_config=generation_config
     )

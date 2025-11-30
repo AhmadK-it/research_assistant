@@ -133,6 +133,10 @@ The system leverages Google's Gemini LLM models and integrates with DuckDuckGo f
 
 ## 🏗 Architecture
 
+![Agent Architecture](Multi-agent%20Sys.png)
+
+### Detailed View
+
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                            ROOT AGENT                                        │
