@@ -8,6 +8,7 @@ build/
 develop-eggs/
 dist/
 downloads/
+PRESENTATION.md
 eggs/
 .eggs/
 lib/
