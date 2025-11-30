@@ -1,0 +1,305 @@
+/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/google/adk/cli/fast_api.py:130: UserWarning: [EXPERIMENTAL] InMemoryCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  credential_service = InMemoryCredentialService()
+/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/google/adk/auth/credential_service/in_memory_credential_service.py:33: UserWarning: [EXPERIMENTAL] BaseCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__()
+INFO:     Started server process [1812143]
+INFO:     Waiting for application startup.
+
++-----------------------------------------------------------------------------+
+| ADK Web Server started                                                      |
+|                                                                             |
+| For local testing, access at http://127.0.0.1:8000.                         |
++-----------------------------------------------------------------------------+
+
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:35774 - "GET /dev-ui/?app=research_agent&session=dbc548a3-c459-4cdd-ac77-b0d4395bf2aa&userId=user HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35774 - "GET /dev-ui/assets/config/runtime-config.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35774 - "GET /list-apps?relative_path=./ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35774 - "GET /apps/research_agent/users/user/sessions/dbc548a3-c459-4cdd-ac77-b0d4395bf2aa HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:38120 - "GET /builder/app/research_agent?ts=1764529411085 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38120 - "GET /apps/research_agent/eval_sets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35774 - "GET /apps/research_agent/eval_results HTTP/1.1" 200 OK
+2025-11-30 22:03:31,631 - INFO - adk_web_server.py:605 - New session created: 52df562b-cd12-455e-b23a-1db5c98a3521
+INFO:     127.0.0.1:35774 - "POST /apps/research_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35774 - "GET /apps/research_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38120 - "GET /apps/research_agent/users/user/sessions/52df562b-cd12-455e-b23a-1db5c98a3521 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38120 - "GET /apps/research_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38120 - "GET /debug/trace/session/52df562b-cd12-455e-b23a-1db5c98a3521 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34588 - "POST /run_sse HTTP/1.1" 200 OK
+2025-11-30 22:03:45,831 - INFO - envs.py:47 - Loaded .env file for research_agent at /home/ahkhadour/code/python/Courses/AI-Agents-5Days/research_assistant/research_agent/.env
+2025-11-30 22:03:45,833 - INFO - envs.py:47 - Loaded .env file for research_agent at /home/ahkhadour/code/python/Courses/AI-Agents-5Days/research_assistant/research_agent/.env
+2025-11-30 22:03:45 - InitHandler - INFO - Setting up retry configuration...
+2025-11-30 22:03:45,854 - INFO - init_handler.py:70 - Setting up retry configuration...
+2025-11-30 22:03:45 - InitHandler - INFO - Creating Search Agent...
+2025-11-30 22:03:45,871 - INFO - init_handler.py:146 - Creating Search Agent...
+2025-11-30 22:03:45 - InitHandler - INFO - Creating Quality Agent...
+2025-11-30 22:03:45,872 - INFO - init_handler.py:154 - Creating Quality Agent...
+2025-11-30 22:03:45 - InitHandler - INFO - Creating Gap Agent...
+2025-11-30 22:03:45,873 - INFO - init_handler.py:161 - Creating Gap Agent...
+2025-11-30 22:03:45 - InitHandler - INFO - Creating Synthesis Agent...
+2025-11-30 22:03:45,874 - INFO - init_handler.py:169 - Creating Synthesis Agent...
+2025-11-30 22:03:45 - InitHandler - INFO - Creating Search+Quality Pipeline (SequentialAgent)...
+2025-11-30 22:03:45,874 - INFO - init_handler.py:180 - Creating Search+Quality Pipeline (SequentialAgent)...
+2025-11-30 22:03:45 - ResearchAssistant.Pipeline - INFO - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:03:45,875 - INFO - search_quality_pipeline.py:80 - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:03:45 - ResearchAssistant.Pipeline - INFO - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:03:45,875 - INFO - search_quality_pipeline.py:112 - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:03:45 - InitHandler - INFO - Creating Parallel Gap Agent (ParallelAgent with 3 slots)...
+2025-11-30 22:03:45,876 - INFO - init_handler.py:192 - Creating Parallel Gap Agent (ParallelAgent with 3 slots)...
+2025-11-30 22:03:45 - ResearchAssistant.ParallelGapAgent - INFO - 🔧 Creating ParallelAgent with 3 fixed slots...
+2025-11-30 22:03:45,876 - INFO - parallel_gap_agent.py:81 - 🔧 Creating ParallelAgent with 3 fixed slots...
+2025-11-30 22:03:45 - ResearchAssistant.Pipeline - INFO - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:03:45,876 - INFO - search_quality_pipeline.py:80 - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:03:45 - ResearchAssistant.Pipeline - INFO - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:03:45,877 - INFO - search_quality_pipeline.py:112 - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:03:45 - ResearchAssistant.ParallelGapAgent - INFO -   ✓ Created pipeline slot 1
+2025-11-30 22:03:45,877 - INFO - parallel_gap_agent.py:95 -   ✓ Created pipeline slot 1
+2025-11-30 22:03:45 - ResearchAssistant.Pipeline - INFO - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:03:45,877 - INFO - search_quality_pipeline.py:80 - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:03:45 - ResearchAssistant.Pipeline - INFO - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:03:45,877 - INFO - search_quality_pipeline.py:112 - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:03:45 - ResearchAssistant.ParallelGapAgent - INFO -   ✓ Created pipeline slot 2
+2025-11-30 22:03:45,878 - INFO - parallel_gap_agent.py:95 -   ✓ Created pipeline slot 2
+2025-11-30 22:03:45 - ResearchAssistant.Pipeline - INFO - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:03:45,878 - INFO - search_quality_pipeline.py:80 - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:03:45 - ResearchAssistant.Pipeline - INFO - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:03:45,878 - INFO - search_quality_pipeline.py:112 - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:03:45 - ResearchAssistant.ParallelGapAgent - INFO -   ✓ Created pipeline slot 3
+2025-11-30 22:03:45,878 - INFO - parallel_gap_agent.py:95 -   ✓ Created pipeline slot 3
+2025-11-30 22:03:45 - ResearchAssistant.ParallelGapAgent - INFO - ✅ ParallelAgent created with 3 sub-agents (static)
+2025-11-30 22:03:45,879 - INFO - parallel_gap_agent.py:120 - ✅ ParallelAgent created with 3 sub-agents (static)
+2025-11-30 22:03:45 - InitHandler - INFO - ✅ All agents created successfully
+2025-11-30 22:03:45,879 - INFO - init_handler.py:200 - ✅ All agents created successfully
+/home/ahkhadour/code/python/Courses/AI-Agents-5Days/research_assistant/research_agent/agent.py:248: UserWarning: [EXPERIMENTAL] ResumabilityConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  resumability_config=ResumabilityConfig(is_resumable=True),
+2025-11-30 22:03:45 - ResearchAssistant - INFO - ============================================================
+2025-11-30 22:03:45,881 - INFO - agent.py:264 - ============================================================
+2025-11-30 22:03:45 - ResearchAssistant - INFO - RESEARCH AGENT INITIALIZED
+2025-11-30 22:03:45,882 - INFO - agent.py:265 - RESEARCH AGENT INITIALIZED
+2025-11-30 22:03:45 - ResearchAssistant - INFO - ============================================================
+2025-11-30 22:03:45,882 - INFO - agent.py:266 - ============================================================
+2025-11-30 22:03:45 - ResearchAssistant - INFO - App Name: research_agent
+2025-11-30 22:03:45,882 - INFO - agent.py:267 - App Name: research_agent
+2025-11-30 22:03:45 - ResearchAssistant - INFO - Resumability: True
+2025-11-30 22:03:45,882 - INFO - agent.py:268 - Resumability: True
+2025-11-30 22:03:45 - ResearchAssistant - INFO - Specialist Agents: search, quality, gap, synthesis
+2025-11-30 22:03:45,882 - INFO - agent.py:269 - Specialist Agents: search, quality, gap, synthesis
+2025-11-30 22:03:45 - ResearchAssistant - INFO - SequentialAgent: search_quality_pipeline
+2025-11-30 22:03:45,882 - INFO - agent.py:270 - SequentialAgent: search_quality_pipeline
+2025-11-30 22:03:45 - ResearchAssistant - INFO - ParallelAgent: parallel_gap_agent (3 fixed slots)
+2025-11-30 22:03:45,882 - INFO - agent.py:271 - ParallelAgent: parallel_gap_agent (3 fixed slots)
+2025-11-30 22:03:45 - ResearchAssistant - INFO - MCP Tool: DuckDuckGo Search
+2025-11-30 22:03:45,882 - INFO - agent.py:272 - MCP Tool: DuckDuckGo Search
+2025-11-30 22:03:45 - ResearchAssistant - INFO - Session Service: InMemorySessionService
+2025-11-30 22:03:45,883 - INFO - agent.py:273 - Session Service: InMemorySessionService
+2025-11-30 22:03:45 - ResearchAssistant - INFO - ============================================================
+2025-11-30 22:03:45,883 - INFO - agent.py:274 - ============================================================
+2025-11-30 22:03:46,081 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:03:49,761 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:03:49,761 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+INFO:     127.0.0.1:34588 - "GET /apps/research_agent/users/user/sessions/52df562b-cd12-455e-b23a-1db5c98a3521 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34594 - "GET /debug/trace/session/52df562b-cd12-455e-b23a-1db5c98a3521 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34594 - "GET /debug/trace/session/52df562b-cd12-455e-b23a-1db5c98a3521 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60604 - "POST /run_sse HTTP/1.1" 200 OK
+2025-11-30 22:04:01,943 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+2025-11-30 22:04:04,026 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:04:04,030 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+
+
+╭──────────────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│                         ▄▀▀ ▄▀█ █▀▀ ▀█▀ █▀▄▀█ █▀▀ █▀█                        │
+│                         █▀  █▀█ ▄▄█  █  █ ▀ █ █▄▄ █▀▀                        │
+│                                                                              │
+│                                FastMCP 2.13.1                                │
+│                                                                              │
+│                                                                              │
+│                    🖥  Server name: Research Search Server                    │
+│                                                                              │
+│                    📦 Transport:   STDIO                                     │
+│                                                                              │
+│                    📚 Docs:        https://gofastmcp.com                     │
+│                    🚀 Hosting:     https://fastmcp.cloud                     │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+
+[11/30/25 22:04:06] INFO     Starting MCP server 'Research Search server.py:1971
+                             Server' with transport 'stdio'                     
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/google/adk/tools/mcp_tool/mcp_tool.py:101: UserWarning: [EXPERIMENTAL] BaseAuthenticatedTool: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__(
+2025-11-30 22:04:06,987 - INFO - types.py:2165 - 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2025-11-30 22:04:07,062 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:04:09,822 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:04:09,823 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call', 'thought_signature', 'function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'chest hypertrophy exercises'
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=chest%20hypertrophy%20exercises 200
+INFO:ddgs.ddgs:Error in engine yandex: TimeoutException("Request timed out: RuntimeError('error sending request for url (https://consent.yahoo.com/v2/collectConsent?sessionId=3_cc-session_2e7b4d8d-6563-45a9-9b15-2fce5afe73d2): operation timed out\\n\\nCaused by:\\n    operation timed out')")
+INFO:primp:response: https://yandex.com/search/site/?text=chest+hypertrophy+exercises&web=1&searchid=2680361 200
+INFO:primp:response: https://www.mojeek.com/search?q=chest+hypertrophy+exercises 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'principles of chest muscle growth'
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=principles%20of%20chest%20muscle%20growth 200
+INFO:primp:response: https://search.brave.com/search?q=principles+of+chest+muscle+growth&source=web 429
+INFO:primp:response: https://www.mojeek.com/search?q=principles+of+chest+muscle+growth 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+2025-11-30 22:04:24,903 - INFO - types.py:2165 - 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2025-11-30 22:04:24,906 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:04:31,541 - INFO - google_llm.py:186 - Response received from the model.
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+2025-11-30 22:04:31,614 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:04:31,615 - INFO - models.py:6856 - AFC is enabled with max remote calls: 10.
+2025-11-30 22:04:42,490 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:04:42,498 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+2025-11-30 22:04:46,890 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:04:52,626 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:04:52,722 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:04:52,723 - INFO - models.py:6856 - AFC is enabled with max remote calls: 10.
+2025-11-30 22:04:57,204 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:04:57,212 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+2025-11-30 22:05:03,478 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call', 'thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:05:03,555 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:05:17,197 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:05:17,198 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call', 'thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:05:17,271 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:05:17,272 - INFO - models.py:6856 - AFC is enabled with max remote calls: 10.
+2025-11-30 22:05:22,776 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:05:22,780 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:05:26,271 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:05:26,278 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+2025-11-30 22:05:30,820 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:05:32,456 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:05:32 - HITL-Handler - INFO - ============================================================
+2025-11-30 22:05:32,464 - INFO - hitl_handler.py:207 - ============================================================
+2025-11-30 22:05:32 - HITL-Handler - INFO - HITL Handler: conduct_adaptive_gap_search invoked
+2025-11-30 22:05:32,465 - INFO - hitl_handler.py:208 - HITL Handler: conduct_adaptive_gap_search invoked
+2025-11-30 22:05:32 - HITL-Handler - INFO - Gaps received: 3
+2025-11-30 22:05:32,466 - INFO - hitl_handler.py:209 - Gaps received: 3
+2025-11-30 22:05:32 - HITL-Handler - INFO - ============================================================
+2025-11-30 22:05:32,467 - INFO - hitl_handler.py:210 - ============================================================
+2025-11-30 22:05:32 - HITL-Handler - INFO - ⏸️ First call - requesting user confirmation...
+2025-11-30 22:05:32,467 - INFO - hitl_handler.py:366 - ⏸️ First call - requesting user confirmation...
+/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/google/adk/tools/tool_context.py:92: UserWarning: [EXPERIMENTAL] ToolConfirmation: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  ToolConfirmation(
+2025-11-30 22:05:32 - HITL-Handler - INFO - 📋 Confirmation requested - awaiting user response
+2025-11-30 22:05:32,468 - INFO - hitl_handler.py:399 - 📋 Confirmation requested - awaiting user response
+INFO:     127.0.0.1:60604 - "GET /apps/research_agent/users/user/sessions/52df562b-cd12-455e-b23a-1db5c98a3521 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37242 - "GET /debug/trace/session/52df562b-cd12-455e-b23a-1db5c98a3521 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37242 - "GET /debug/trace/session/52df562b-cd12-455e-b23a-1db5c98a3521 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41820 - "POST /run_sse HTTP/1.1" 200 OK
+2025-11-30 22:05:55,525 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+2025-11-30 22:05:58,364 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:05:59,182 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:05:59 - HITL-Handler - INFO - ============================================================
+2025-11-30 22:05:59,190 - INFO - hitl_handler.py:207 - ============================================================
+2025-11-30 22:05:59 - HITL-Handler - INFO - HITL Handler: conduct_adaptive_gap_search invoked
+2025-11-30 22:05:59,191 - INFO - hitl_handler.py:208 - HITL Handler: conduct_adaptive_gap_search invoked
+2025-11-30 22:05:59 - HITL-Handler - INFO - Gaps received: 3
+2025-11-30 22:05:59,191 - INFO - hitl_handler.py:209 - Gaps received: 3
+2025-11-30 22:05:59 - HITL-Handler - INFO - ============================================================
+2025-11-30 22:05:59,191 - INFO - hitl_handler.py:210 - ============================================================
+2025-11-30 22:05:59 - HITL-Handler - INFO - 🔍 Re-called after confirmation. user_decision=rejected
+2025-11-30 22:05:59,191 - INFO - hitl_handler.py:304 - 🔍 Re-called after confirmation. user_decision=rejected
+2025-11-30 22:05:59 - HITL-Handler - INFO - ❌ User REJECTED gap research (via user_decision parameter)
+2025-11-30 22:05:59,192 - INFO - hitl_handler.py:314 - ❌ User REJECTED gap research (via user_decision parameter)
+2025-11-30 22:05:59,594 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+2025-11-30 22:06:02,323 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:06:05,927 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:06:05,935 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:06:18,125 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:06:18,125 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call', 'thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:06:18,130 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:06:18,131 - INFO - models.py:6856 - AFC is enabled with max remote calls: 10.
+2025-11-30 22:06:23,691 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:06:23,695 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:06:27,828 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:06:27,837 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+2025-11-30 22:06:31,411 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+INFO:     127.0.0.1:41820 - "GET /apps/research_agent/users/user/sessions/52df562b-cd12-455e-b23a-1db5c98a3521 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46936 - "GET /debug/trace/session/52df562b-cd12-455e-b23a-1db5c98a3521 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46936 - "GET /debug/trace/session/52df562b-cd12-455e-b23a-1db5c98a3521 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55706 - "GET /apps/research_agent/users/user/sessions/52df562b-cd12-455e-b23a-1db5c98a3521 HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+
++-----------------------------------------------------------------------------+
+| ADK Web Server shutting down...                                             |
++-----------------------------------------------------------------------------+
+
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1812143]
+2025-11-30 22:08:07,369 - ERROR - base_events.py:1879 - an error occurred during closing of asynchronous generator <async_generator object stdio_client at 0x7fd88c09e3b0>
+asyncgen: <async_generator object stdio_client at 0x7fd88c09e3b0>
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 781, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/mcp/client/stdio/__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/mcp/client/stdio/__init__.py", line 183, in stdio_client
+    anyio.create_task_group() as tg,
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 787, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 459, in __exit__
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+
+Aborted!
+2025-11-30 22:08:07,779 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fd88bcc70e0>
+2025-11-30 22:08:07,788 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fd88bd4ca50>
+2025-11-30 22:08:07,794 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fd88bd4ccd0>
+2025-11-30 22:08:07,801 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fd88bcc8550>
+2025-11-30 22:08:08,214 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fd88bd25a90>
+2025-11-30 22:08:08,215 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fd88bd4c690>

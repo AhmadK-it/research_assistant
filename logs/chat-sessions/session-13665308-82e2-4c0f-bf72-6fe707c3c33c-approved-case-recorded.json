@@ -1,0 +1,1028 @@
+{
+  "id": "13665308-82e2-4c0f-bf72-6fe707c3c33c",
+  "appName": "research_agent",
+  "userId": "user",
+  "state": {
+    "hitl_confirmation_requested": false,
+    "adaptive_gaps": [
+      {
+        "rationale": "While several sources discuss hypertrophy, a deeper dive into advanced techniques like rest-pause, drop sets, or myo-reps is missing.",
+        "priority": "high",
+        "gap_type": "topical",
+        "topic": "Specific hypertrophy training techniques",
+        "suggested_query": "advanced chest hypertrophy training techniques scientific basis"
+      },
+      {
+        "priority": "medium",
+        "gap_type": "temporal",
+        "rationale": "The results focus on best exercises and immediate programming, but lack information on how to structure long-term progression for sustained hypertrophy.",
+        "suggested_query": "longitudinal studies chest hypertrophy programming progression",
+        "topic": "Long-term hypertrophy progress tracking"
+      },
+      {
+        "suggested_query": "nutrition protein intake for muscle hypertrophy chest",
+        "priority": "medium",
+        "topic": "Nutrition's role in chest hypertrophy",
+        "gap_type": "topical",
+        "rationale": "While the query is about training, nutrition is a critical component of muscle hypertrophy that is not addressed in the provided results."
+      }
+    ],
+    "gap_research_approved": true
+  },
+  "events": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "hey "
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-af4d2dc2-1edb-407f-b2c4-326e83af0a4b",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "a45dc119-28a5-4993-aab6-915485339b1c",
+      "timestamp": 1764529737.291032
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "Hello! I'm your research coordinator. Please tell me what topic you'd like to research today.",
+            "thoughtSignature": "CqkCAXLI2nxC2Nmlf5Rr0bChQOc4LmkaOHaREI3yBX9mkyu1zG45fi0QeT8LiswkDiVC261Q6ZbPL5ax_qvXPTQpAQxc9TiMa1GR14ax5aDBfv5mNG3YIypInvVMvQsQl9Yor5sk9qP15-VO-a4sc9aDg4ZdTpYikFDKWBwcuyVyuNc7lV1K1kWlo9Guz982_EOMqKwtpY4zO10QFeIIYqc-Cg-eBLjC3_5K0Vc6vdDrvGd2pj_ridFiLpsT2_NH9ttWE_ch0EpOAqSkgmLsQba20oDhX9LWs0DufzRBlsojW78_Onzxi_bLzZ4kJCTDD9Q6I85ILF3BPuTY-oxqyGVNOjVBbXdQHUwkv8YqymHHdIs6hAXhHsGObC_pF861UE2d4izFAJwB2tuq"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 22,
+        "promptTokenCount": 2500,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2500
+          }
+        ],
+        "thoughtsTokenCount": 57,
+        "totalTokenCount": 2579
+      },
+      "invocationId": "e-af4d2dc2-1edb-407f-b2c4-326e83af0a4b",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "d031baed-18bb-42f2-8b51-a758d119ee18",
+      "timestamp": 1764529737.295832
+    },
+    {
+      "invocationId": "e-af4d2dc2-1edb-407f-b2c4-326e83af0a4b",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {},
+        "endOfAgent": true
+      },
+      "id": "2bb52202-c148-4e40-9674-6dffee3e6224",
+      "timestamp": 1764529740.554148
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "chest and hypertrophy"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-0f4394fd-3246-4256-abf8-aa551783d6f6",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "a612b39c-61c7-4795-97c9-7a0ab3140970",
+      "timestamp": 1764529752.423232
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "🔍 Phase 1+2: Conducting research with quality assessment for \"chest and hypertrophy\"..."
+          }
+        ],
+        "role": "model"
+      },
+      "usageMetadata": {
+        "candidatesTokenCount": 37,
+        "promptTokenCount": 2527,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2527
+          }
+        ],
+        "thoughtsTokenCount": 85,
+        "totalTokenCount": 2649
+      },
+      "invocationId": "e-0f4394fd-3246-4256-abf8-aa551783d6f6",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "0237ad58-fbd6-4fbf-b1ab-4e9faf17b4a2",
+      "timestamp": 1764529754.022499
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-fbed63fb-fad3-45ec-b161-4c5b83bf31df",
+              "args": {
+                "request": "chest and hypertrophy"
+              },
+              "name": "search_quality_pipeline"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 37,
+        "promptTokenCount": 2527,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2527
+          }
+        ],
+        "thoughtsTokenCount": 85,
+        "totalTokenCount": 2649
+      },
+      "invocationId": "e-0f4394fd-3246-4256-abf8-aa551783d6f6",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [],
+      "id": "6a2a691a-d08e-4e1c-8b44-bf95a297f85c",
+      "timestamp": 1764529754.358316
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-fbed63fb-fad3-45ec-b161-4c5b83bf31df",
+              "name": "search_quality_pipeline",
+              "response": {
+                "result": "Here's an evaluation of the provided search results:\n\n### Search Result Evaluation\n\n**1. Complete Chest Training Guide | RP Strength**\n*   **Source:** RP Strength (rpstrength.com) is a highly reputable, science-based strength and nutrition coaching company founded by Dr. Mike Israetel, a prominent figure in exercise science.\n*   **Relevance:** Directly addresses chest hypertrophy principles, offering a science-based guide on volume, exercise selection, and programming for maximum development.\n*   **Recency:** Not explicitly stated, but RP Strength articles are generally kept up-to-date with current research.\n*   **Depth:** Expected to be substantive given the source's nature and the snippet's mention of \"science-based guide\" and \"optimal volume, exercise selection, and programming.\"\n*   **Credibility:** 9/10\n*   **Relevance:** 10/10\n*   **Overall:** 9.5/10\n\n**2. Best Chest Exercises For Hypertrophy | Barbell Medicine**\n*   **Source:** Barbell Medicine (barbellmedicine.com) is a highly respected organization providing evidence-based information on strength training, nutrition, and health, often run by medical professionals and PhDs.\n*   **Relevance:** Explicitly focuses on prioritizing exercises for chest muscle hypertrophy to maximize results.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Expected to be substantive and evidence-based.\n*   **Credibility:** 9/10\n*   **Relevance:** 10/10\n*   **Overall:** 9.5/10\n\n**3. Quick Reads: Best Way to Train for Chest Hypertrophy | BOXROX**\n*   **Source:** BOXROX (boxrox.com) is a popular fitness news and training website. While it's not a peer-reviewed journal, it often features articles by coaches and sometimes cites studies. The snippet mentions \"personal experience plus 9 studies published recently.\"\n*   **Relevance:** Directly addresses the best ways to train for chest hypertrophy.\n*   **Recency:** Snippet mentions \"9 studies published recently,\" suggesting up-to-date content.\n*   **Depth:** \"Quick Reads\" might imply less depth than comprehensive guides, but the inclusion of recent studies is a positive.\n*   **Credibility:** 7/10\n*   **Relevance:** 9/10\n*   **Overall:** 8.0/10\n\n**4. How to Design a Hypertrophy Chest Workout | OPEX Fitness**\n*   **Source:** OPEX Fitness (opexfit.com) is a well-regarded coaching education and certification company in the fitness industry, known for its individualized program design principles.\n*   **Relevance:** Provides guidance on designing a chest workout specifically for hypertrophy.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Expected to be substantive given the focus on workout design.\n*   **Credibility:** 8/10\n*   **Relevance:** 9/10\n*   **Overall:** 8.5/10\n\n**5. Best Hypertrophy Chest Workout | Men's Journal - Men's Journal**\n*   **Source:** Men's Journal (mensjournal.com) is a well-established mainstream lifestyle magazine that includes fitness content.\n*   **Relevance:** Directly offers an \"Ultimate Hypertrophy Workout\" for the chest.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Likely provides practical workout routines, but the scientific basis might be less detailed than more specialized fitness sites.\n*   **Credibility:** 6/10\n*   **Relevance:** 9/10\n*   **Overall:** 7.5/10\n\n**6. The 10 Best Chest Exercises for Muscle & Strength – StrengthLog**\n*   **Source:** StrengthLog (strengthlog.com) is a reputable fitness app and content platform, generally providing evidence-based strength training advice.\n*   **Relevance:** Explicitly lists and describes chest exercises for muscle growth and discusses chest anatomy, highly relevant to the query.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Expected to be comprehensive for exercises.\n*   **Credibility:** 7/10\n*   **Relevance:** 9/10\n*   **Overall:** 8.0/10\n\n**7. Learn how to perform the best exercises targeting your Chest . | Fitbod**\n*   **Source:** Fitbod (fitbod.me) is a popular fitness app. Its blog content is generally professionally written, but the depth of research might vary.\n*   **Relevance:** Provides a comprehensive list of chest exercises and mentions how they contribute to muscle activation and growth.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Listing \"88 Best Chest Exercises\" suggests breadth, but depth on each might be limited.\n*   **Credibility:** 6/10\n*   **Relevance:** 9/10\n*   **Overall:** 7.5/10\n\n**8. 8 Unorthodox Exercises to Force Chest Muscle Growth | BOXROX**\n*   **Source:** BOXROX (boxrox.com) - similar to result 3.\n*   **Relevance:** Focuses on specific exercises for chest muscle growth, albeit \"unorthodox\" ones.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Likely focuses on demonstrating and explaining the specific exercises.\n*   **Credibility:** 7/10\n*   **Relevance:** 8/10\n*   **Overall:** 7.5/10\n\n**9. Find and save ideas about how to grow your upper chest on Pinterest.**\n*   **Source:** Pinterest (pinterest.com) is a social media and content aggregation platform, not a primary source of information. The credibility of linked content varies widely.\n*   **Relevance:** While it might link to relevant content, Pinterest itself is not a direct source of instructional material. The snippet mentions \"for women,\" which might narrow the scope.\n*   **Recency:** Unclear, as content on Pinterest can be old or new.\n*   **Depth:** Very superficial, as it's an aggregation platform.\n*   **Credibility:** 3/10 (as a direct information source)\n*   **Relevance:** 5/10 (as it's a pointer, not direct content, and for \"ideas\")\n*   **Overall:** 4.0/10\n*   **Flag:** Low Quality - Consider Removing\n\n**10. Best Lower Chest Workout | 8 Best Exercises | ATHLEAN-X**\n*   **Source:** ATHLEAN-X (learn.athleanx.com) is a popular fitness brand led by Jeff Cavaliere, a physical therapist and strength coach, providing professional fitness content.\n*   **Relevance:** Specifically targets lower chest exercises for muscle growth, a component of overall chest hypertrophy.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Expected to be detailed for the specific exercises and training approach.\n*   **Credibility:** 8/10\n*   **Relevance:** 9/10\n*   **Overall:** 8.5/10\n\n**11. 8 Advanced Chest Training Techniques for Maximum Growth | BOXROX**\n*   **Source:** BOXROX (boxrox.com) - similar to results 3 and 8.\n*   **Relevance:** Explicitly focuses on advanced techniques to maximize chest muscle growth and hypertrophy.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Expected to cover specific techniques in detail.\n*   **Credibility:** 7/10\n*   **Relevance:** 9/10\n*   **Overall:** 8.0/10\n\n**12. How to Do Peck Deck for Hypertrophy | TikTok**\n*   **Source:** TikTok (tiktok.com) is a social media platform. Content quality and credibility vary significantly, often lacking in-depth scientific rigor.\n*   **Relevance:** Focuses on a single exercise and tips for maximizing its effectiveness for chest hypertrophy.\n*   **Recency:** TikTok content is typically recent but ephemeral.\n*   **Depth:** Limited, usually short-form video content.\n*   **Credibility:** 3/10 (as a source for detailed, reliable fitness information)\n*   **Relevance:** 6/10 (focuses on one exercise's hypertrophy potential)\n*   **Overall:** 4.5/10\n*   **Flag:** Low Quality - Consider Removing\n\n**13. Chest Workout Program for Mass: 7 Best Pec Exercises | Legion**\n*   **Source:** Legion Athletics (legionathletics.com) is a supplement and content company founded by Mike Matthews, known for its evidence-based approach to fitness and nutrition.\n*   **Relevance:** Provides practical, research-backed advice on workout frequency for maximizing chest growth.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Expected to offer concrete, actionable advice.\n*   **Credibility:** 8/10\n*   **Relevance:** 10/10\n*   **Overall:** 9.0/10\n\n### Top 3 Highest-Quality Sources\n\n1.  **Complete Chest Training Guide | RP Strength** (Overall: 9.5/10)\n2.  **Best Chest Exercises For Hypertrophy | Barbell Medicine** (Overall: 9.5/10)\n3.  **Chest Workout Program for Mass: 7 Best Pec Exercises | Legion** (Overall: 9.0/10)"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-0f4394fd-3246-4256-abf8-aa551783d6f6",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "aac5c5cf-7d1e-4261-b475-1e8aaa67c739",
+      "timestamp": 1764529802.458078
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "🔬 Phase 3: Analyzing gaps and generating initial report..."
+          }
+        ],
+        "role": "model"
+      },
+      "usageMetadata": {
+        "candidatesTokenCount": 2246,
+        "promptTokenCount": 4802,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4802
+          }
+        ],
+        "totalTokenCount": 7048
+      },
+      "invocationId": "e-0f4394fd-3246-4256-abf8-aa551783d6f6",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "f98874c8-931f-483b-a77d-847a499812f3",
+      "timestamp": 1764529806.072637
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-88e32b1d-6c4b-4f78-b06a-c82653f212ce",
+              "args": {
+                "request": "Here's an evaluation of the provided search results:\n\n### Search Result Evaluation\n\n**1. Complete Chest Training Guide | RP Strength**\n*   **Source:** RP Strength (rpstrength.com) is a highly reputable, science-based strength and nutrition coaching company founded by Dr. Mike Israetel, a prominent figure in exercise science.\n*   **Relevance:** Directly addresses chest hypertrophy principles, offering a science-based guide on volume, exercise selection, and programming for maximum development.\n*   **Recency:** Not explicitly stated, but RP Strength articles are generally kept up-to-date with current research.\n*   **Depth:** Expected to be substantive given the source's nature and the snippet's mention of \"science-based guide\" and \"optimal volume, exercise selection, and programming.\"\n*   **Credibility:** 9/10\n*   **Relevance:** 10/10\n*   **Overall:** 9.5/10\n\n**2. Best Chest Exercises For Hypertrophy | Barbell Medicine**\n*   **Source:** Barbell Medicine (barbellmedicine.com) is a highly respected organization providing evidence-based information on strength training, nutrition, and health, often run by medical professionals and PhDs.\n*   **Relevance:** Explicitly focuses on prioritizing exercises for chest muscle hypertrophy to maximize results.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Expected to be substantive and evidence-based.\n*   **Credibility:** 9/10\n*   **Relevance:** 10/10\n*   **Overall:** 9.5/10\n\n**3. Quick Reads: Best Way to Train for Chest Hypertrophy | BOXROX**\n*   **Source:** BOXROX (boxrox.com) is a popular fitness news and training website. While it's not a peer-reviewed journal, it often features articles by coaches and sometimes cites studies. The snippet mentions \"personal experience plus 9 studies published recently.\"\n*   **Relevance:** Directly addresses the best ways to train for chest hypertrophy.\n*   **Recency:** Snippet mentions \"9 studies published recently,\" suggesting up-to-date content.\n*   **Depth:** \"Quick Reads\" might imply less depth than comprehensive guides, but the inclusion of recent studies is a positive.\n*   **Credibility:** 7/10\n*   **Relevance:** 9/10\n*   **Overall:** 8.0/10\n\n**4. How to Design a Hypertrophy Chest Workout | OPEX Fitness**\n*   **Source:** OPEX Fitness (opexfit.com) is a well-regarded coaching education and certification company in the fitness industry, known for its individualized program design principles.\n*   **Relevance:** Provides guidance on designing a chest workout specifically for hypertrophy.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Expected to be substantive given the focus on workout design.\n*   **Credibility:** 8/10\n*   **Relevance:** 9/10\n*   **Overall:** 8.5/10\n\n**5. Best Hypertrophy Chest Workout | Men's Journal - Men's Journal**\n*   **Source:** Men's Journal (mensjournal.com) is a well-established mainstream lifestyle magazine that includes fitness content.\n*   **Relevance:** Directly offers an \"Ultimate Hypertrophy Workout\" for the chest.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Likely provides practical workout routines, but the scientific basis might be less detailed than more specialized fitness sites.\n*   **Credibility:** 6/10\n*   **Relevance:** 9/10\n*   **Overall:** 7.5/10\n\n**6. The 10 Best Chest Exercises for Muscle & Strength – StrengthLog**\n*   **Source:** StrengthLog (strengthlog.com) is a reputable fitness app and content platform, generally providing evidence-based strength training advice.\n*   **Relevance:** Explicitly lists and describes chest exercises for muscle growth and discusses chest anatomy, highly relevant to the query.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Expected to be comprehensive for exercises.\n*   **Credibility:** 7/10\n*   **Relevance:** 9/10\n*   **Overall:** 8.0/10\n\n**7. Learn how to perform the best exercises targeting your Chest . | Fitbod**\n*   **Source:** Fitbod (fitbod.me) is a popular fitness app. Its blog content is generally professionally written, but the depth of research might vary.\n*   **Relevance:** Provides a comprehensive list of chest exercises and mentions how they contribute to muscle activation and growth.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Listing \"88 Best Chest Exercises\" suggests breadth, but depth on each might be limited.\n*   **Credibility:** 6/10\n*   **Relevance:** 9/10\n*   **Overall:** 7.5/10\n\n**8. 8 Unorthodox Exercises to Force Chest Muscle Growth | BOXROX**\n*   **Source:** BOXROX (boxrox.com) - similar to result 3.\n*   **Relevance:** Focuses on specific exercises for chest muscle growth, albeit \"unorthodox\" ones.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Likely focuses on demonstrating and explaining the specific exercises.\n*   **Credibility:** 7/10\n*   **Relevance:** 8/10\n*   **Overall:** 7.5/10\n\n**9. Find and save ideas about how to grow your upper chest on Pinterest.**\n*   **Source:** Pinterest (pinterest.com) is a social media and content aggregation platform, not a primary source of information. The credibility of linked content varies widely.\n*   **Relevance:** While it might link to relevant content, Pinterest itself is not a direct source of instructional material. The snippet mentions \"for women,\" which might narrow the scope.\n*   **Recency:** Unclear, as content on Pinterest can be old or new.\n*   **Depth:** Very superficial, as it's an aggregation platform.\n*   **Credibility:** 3/10 (as a direct information source)\n*   **Relevance:** 5/10 (as it's a pointer, not direct content, and for \"ideas\")\n*   **Overall:** 4.0/10\n*   **Flag:** Low Quality - Consider Removing\n\n**10. Best Lower Chest Workout | 8 Best Exercises | ATHLEAN-X**\n*   **Source:** ATHLEAN-X (learn.athleanx.com) is a popular fitness brand led by Jeff Cavaliere, a physical therapist and strength coach, providing professional fitness content.\n*   **Relevance:** Specifically targets lower chest exercises for muscle growth, a component of overall chest hypertrophy.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Expected to be detailed for the specific exercises and training approach.\n*   **Credibility:** 8/10\n*   **Relevance:** 9/10\n*   **Overall:** 8.5/10\n\n**11. 8 Advanced Chest Training Techniques for Maximum Growth | BOXROX**\n*   **Source:** BOXROX (boxrox.com) - similar to results 3 and 8.\n*   **Relevance:** Explicitly focuses on advanced techniques to maximize chest muscle growth and hypertrophy.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Expected to cover specific techniques in detail.\n*   **Credibility:** 7/10\n*   **Relevance:** 9/10\n*   **Overall:** 8.0/10\n\n**12. How to Do Peck Deck for Hypertrophy | TikTok**\n*   **Source:** TikTok (tiktok.com) is a social media platform. Content quality and credibility vary significantly, often lacking in-depth scientific rigor.\n*   **Relevance:** Focuses on a single exercise and tips for maximizing its effectiveness for chest hypertrophy.\n*   **Recency:** TikTok content is typically recent but ephemeral.\n*   **Depth:** Limited, usually short-form video content.\n*   **Credibility:** 3/10 (as a source for detailed, reliable fitness information)\n*   **Relevance:** 6/10 (focuses on one exercise's hypertrophy potential)\n*   **Overall:** 4.5/10\n*   **Flag:** Low Quality - Consider Removing\n\n**13. Chest Workout Program for Mass: 7 Best Pec Exercises | Legion**\n*   **Source:** Legion Athletics (legionathletics.com) is a supplement and content company founded by Mike Matthews, known for its evidence-based approach to fitness and nutrition.\n*   **Relevance:** Provides practical, research-backed advice on workout frequency for maximizing chest growth.\n*   **Recency:** Not explicitly stated.\n*   **Depth:** Expected to offer concrete, actionable advice.\n*   **Credibility:** 8/10\n*   **Relevance:** 10/10\n*   **Overall:** 9.0/10\n\n### Top 3 Highest-Quality Sources\n\n1.  **Complete Chest Training Guide | RP Strength** (Overall: 9.5/10)\n2.  **Best Chest Exercises For Hypertrophy | Barbell Medicine** (Overall: 9.5/10)\n3.  **Chest Workout Program for Mass: 7 Best Pec Exercises | Legion** (Overall: 9.0/10)"
+              },
+              "name": "gap_identifier"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 2246,
+        "promptTokenCount": 4802,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4802
+          }
+        ],
+        "totalTokenCount": 7048
+      },
+      "invocationId": "e-0f4394fd-3246-4256-abf8-aa551783d6f6",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [],
+      "id": "e433eebb-dc27-43c3-a30b-3564a4621a0e",
+      "timestamp": 1764529812.663123
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-88e32b1d-6c4b-4f78-b06a-c82653f212ce",
+              "name": "gap_identifier",
+              "response": {
+                "result": "```json\n[\n    {\n        \"topic\": \"Specific hypertrophy training techniques\",\n        \"suggested_query\": \"advanced chest hypertrophy training techniques scientific basis\",\n        \"priority\": \"high\",\n        \"rationale\": \"While several sources discuss hypertrophy, a deeper dive into advanced techniques like rest-pause, drop sets, or myo-reps is missing.\",\n        \"gap_type\": \"topical\"\n    },\n    {\n        \"topic\": \"Long-term hypertrophy progress tracking\",\n        \"suggested_query\": \"longitudinal studies chest hypertrophy programming progression\",\n        \"priority\": \"medium\",\n        \"rationale\": \"The results focus on best exercises and immediate programming, but lack information on how to structure long-term progression for sustained hypertrophy.\",\n        \"gap_type\": \"temporal\"\n    },\n    {\n        \"topic\": \"Nutrition's role in chest hypertrophy\",\n        \"suggested_query\": \"nutrition protein intake for muscle hypertrophy chest\",\n        \"priority\": \"medium\",\n        \"rationale\": \"While the query is about training, nutrition is a critical component of muscle hypertrophy that is not addressed in the provided results.\",\n        \"gap_type\": \"topical\"\n    }\n]\n```"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-0f4394fd-3246-4256-abf8-aa551783d6f6",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "68bb13ca-4036-4cbb-8419-e24ad1567c06",
+      "timestamp": 1764529816.251446
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-d3fcca3e-8bdf-45fe-a19a-ff5e73ec6b0c",
+              "args": {
+                "request": "Initial research on 'chest and hypertrophy' provided these quality-assessed search results:\n\n**1. Complete Chest Training Guide | RP Strength**\n*   **Source:** RP Strength (rpstrength.com) is a highly reputable, science-based strength and nutrition coaching company founded by Dr. Mike Israetel, a prominent figure in exercise science.\n*   **Relevance:** Directly addresses chest hypertrophy principles, offering a science-based guide on volume, exercise selection, and programming for maximum development.\n*   **Credibility:** 9/10\n\n**2. Best Chest Exercises For Hypertrophy | Barbell Medicine**\n*   **Source:** Barbell Medicine (barbellmedicine.com) is a highly respected organization providing evidence-based information on strength training, nutrition, and health, often run by medical professionals and PhDs.\n*   **Relevance:** Explicitly focuses on prioritizing exercises for chest muscle hypertrophy to maximize results.\n*   **Credibility:** 9/10\n\n**3. Quick Reads: Best Way to Train for Chest Hypertrophy | BOXROX**\n*   **Source:** BOXROX (boxrox.com) is a popular fitness news and training website. The snippet mentions \"personal experience plus 9 studies published recently.\"\n*   **Relevance:** Directly addresses the best ways to train for chest hypertrophy.\n*   **Credibility:** 7/10\n\n**4. How to Design a Hypertrophy Chest Workout | OPEX Fitness**\n*   **Source:** OPEX Fitness (opexfit.com) is a well-regarded coaching education and certification company.\n*   **Relevance:** Provides guidance on designing a chest workout specifically for hypertrophy.\n*   **Credibility:** 8/10\n\n**5. Best Hypertrophy Chest Workout | Men's Journal - Men's Journal**\n*   **Source:** Men's Journal (mensjournal.com) is a well-established mainstream lifestyle magazine.\n*   **Relevance:** Directly offers an \"Ultimate Hypertrophy Workout\" for the chest.\n*   **Credibility:** 6/10\n\n**6. The 10 Best Chest Exercises for Muscle & Strength – StrengthLog**\n*   **Source:** StrengthLog (strengthlog.com) is a reputable fitness app and content platform.\n*   **Relevance:** Explicitly lists and describes chest exercises for muscle growth and discusses chest anatomy.\n*   **Credibility:** 7/10\n\n**7. Learn how to perform the best exercises targeting your Chest . | Fitbod**\n*   **Source:** Fitbod (fitbod.me) is a popular fitness app.\n*   **Relevance:** Provides a comprehensive list of chest exercises and mentions how they contribute to muscle activation and growth.\n*   **Credibility:** 6/10\n\n**8. 8 Unorthodox Exercises to Force Chest Muscle Growth | BOXROX**\n*   **Source:** BOXROX (boxrox.com).\n*   **Relevance:** Focuses on specific exercises for chest muscle growth, albeit \"unorthodox\" ones.\n*   **Credibility:** 7/10\n\n**9. Best Lower Chest Workout | 8 Best Exercises | ATHLEAN-X**\n*   **Source:** ATHLEAN-X (learn.athleanx.com) is a popular fitness brand led by Jeff Cavaliere, a physical therapist and strength coach.\n*   **Relevance:** Specifically targets lower chest exercises for muscle growth, a component of overall chest hypertrophy.\n*   **Credibility:** 8/10\n\n**10. 8 Advanced Chest Training Techniques for Maximum Growth | BOXROX**\n*   **Source:** BOXROX (boxrox.com).\n*   **Relevance:** Explicitly focuses on advanced techniques to maximize chest muscle growth and hypertrophy.\n*   **Credibility:** 7/10\n\n**11. Chest Workout Program for Mass: 7 Best Pec Exercises | Legion**\n*   **Source:** Legion Athletics (legionathletics.com) is a supplement and content company founded by Mike Matthews.\n*   **Relevance:** Provides practical, research-backed advice on workout frequency for maximizing chest growth.\n*   **Credibility:** 8/10\n\n\n**Identified Gaps:**\n\n1.  **Specific hypertrophy training techniques**: While several sources discuss hypertrophy, a deeper dive into advanced techniques like rest-pause, drop sets, or myo-reps is missing.\n2.  **Long-term hypertrophy progress tracking**: The results focus on best exercises and immediate programming, but lack information on how to structure long-term progression for sustained hypertrophy.\n3.  **Nutrition's role in chest hypertrophy**: While the query is about training, nutrition is a critical component of muscle hypertrophy that is not addressed in the provided results."
+              },
+              "name": "research_synthesizer"
+            },
+            "thoughtSignature": "CikBcsjafArkyCYqHyVpP4blEqJXNWBrl39a6bzyZ23iJwAi0gnPNowIOAprAXLI2nzkkWtwCyXUSVUrxffzfS36VmB9LH0pTZ1ycnvGBpCiB3AhUEulplZwJylgwmp6TTv8BwRUiML-PCLcLYAML5SQi8GytYgNl-WvEnJpZmB77pnIcB358KZdWqSPQ_Mw7iW6dxm-_osK9wEBcsjafAtBabWfpUDEksgGpmMRGlv1uDRf3PMopWkDewLNnWfr4QFfkHCNXLSvHEZfh5I8hCC_XQrGo-vP3yMgxkzyTBvMAV7QloP0s2m61aY9sScBO0Tihmh3pypUfS8zhiaEyqt9lyYX5YtfSvrtb-54FbYMSSqs9uBEn1JlseV2IoQQBmOI0ZsBRW3zwvw7hS1MIS0HdeZo71gxocaEIlR3QAcR-PLcNUw_vV3X4LNDTvVScXdvxVNb3x6DKB4idJiaIIXxoj8YsFl88FK9sGid1tXeNlEL7NIhTbEdRazpggtxTP8Sc2z5_KloimpbBctPFIEeCtwBAXLI2nwYwmoXHSs0g6xwCR-sdXdBBz05FOzsvvmZCKL6wOqHcBXOB2eqk3tMhvhAs_t_qG4_ZTdHIbMa5pdVaqWVna7Pu3VCLxqfGuA1rp1BHZeJWknfIGU3W9tpu_8K69rZgJLb_kKbHN2vLQo0Hkv7cIjGgbVYoLHsEVRhZmfj4FSlJxtmypzsNjNJmfCYHvHI2MWv4qB3pQwtzjjYNiVktw1XVvpe43nErgvRTJQoLZBL5kzuhNlcFJhfY1zY5kzexcNXUmhSqkWyaEvTQkv1AK_22VXoowZ03woqAXLI2nwSdhwPTMJXdz612uRUdfOUGJiR0V_d-_LRLKfnNncTCJW3l5K4"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 1098,
+        "promptTokenCount": 7349,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7349
+          }
+        ],
+        "thoughtsTokenCount": 123,
+        "totalTokenCount": 8570
+      },
+      "invocationId": "e-0f4394fd-3246-4256-abf8-aa551783d6f6",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [],
+      "id": "17bd2a1e-abea-4e98-ae0d-dfd4afaa0fcb",
+      "timestamp": 1764529816.257
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-d3fcca3e-8bdf-45fe-a19a-ff5e73ec6b0c",
+              "name": "research_synthesizer",
+              "response": {
+                "result": "# Research Report: Chest and Hypertrophy\n\n## Executive Summary\nEffective chest hypertrophy training is guided by science-backed principles, emphasizing proper exercise selection, adequate volume, and structured workout design. Reputable sources offer comprehensive guidance on these aspects, including specific exercises to target different chest areas and the application of advanced techniques for enhanced growth.\n\n## Key Findings\n- **Exercise Selection:** Prioritizing specific exercises that effectively target the chest muscles is crucial for maximizing hypertrophy. Recommendations include a variety of movements for overall development and focused exercises for specific areas like the lower chest. (Source: Barbell Medicine, ATHLEAN-X, StrengthLog, Fitbod)\n- **Training Principles and Programming:** Fundamental principles such as appropriate training volume, judicious exercise selection, and consistent workout frequency are essential for designing effective chest hypertrophy programs. (Source: RP Strength, OPEX Fitness, Legion Athletics)\n- **Advanced Training Techniques:** The implementation of advanced training techniques can provide additional stimulus to optimize chest muscle growth and further promote hypertrophy. (Source: BOXROX)\n\n## Sources\n- Complete Chest Training Guide | RP Strength (https://rpstrength.com)\n- Best Chest Exercises For Hypertrophy | Barbell Medicine (https://barbellmedicine.com)\n- Quick Reads: Best Way to Train for Chest Hypertrophy | BOXROX (https://boxrox.com)\n- How to Design a Hypertrophy Chest Workout | OPEX Fitness (https://opexfit.com)\n- Best Hypertrophy Chest Workout | Men's Journal - Men's Journal (https://mensjournal.com)\n- The 10 Best Chest Exercises for Muscle & Strength – StrengthLog (https://strengthlog.com)\n- Learn how to perform the best exercises targeting your Chest . | Fitbod (https://fitbod.me)\n- 8 Unorthodox Exercises to Force Chest Muscle Growth | BOXROX (https://boxrox.com)\n- Best Lower Chest Workout | 8 Best Exercises | ATHLEAN-X (https://learn.athleanx.com)\n- 8 Advanced Chest Training Techniques for Maximum Growth | BOXROX (https://boxrox.com)\n- Chest Workout Program for Mass: 7 Best Pec Exercises | Legion (https://legionathletics.com)\n\n## Information Gaps\n- Specific hypertrophy training techniques\n- Long-term hypertrophy progress tracking\n- Nutrition's role in chest hypertrophy"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-0f4394fd-3246-4256-abf8-aa551783d6f6",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "d8f020ed-41da-4618-a994-857bb26244fe",
+      "timestamp": 1764529841.193011
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "# Research Report: Chest and Hypertrophy\n\n## Executive Summary\nEffective chest hypertrophy training is guided by science-backed principles, emphasizing proper exercise selection, adequate volume, and structured workout design. Reputable sources offer comprehensive guidance on these aspects, including specific exercises to target different chest areas and the application of advanced techniques for enhanced growth.\n\n## Key Findings\n- **Exercise Selection:** Prioritizing specific exercises that effectively target the chest muscles is crucial for maximizing hypertrophy. Recommendations include a variety of movements for overall development and focused exercises for specific areas like the lower chest. (Source: Barbell Medicine, ATHLEAN-X, StrengthLog, Fitbod)\n- **Training Principles and Programming:** Fundamental principles such as appropriate training volume, judicious exercise selection, and consistent workout frequency are essential for designing effective chest hypertrophy programs. (Source: RP Strength, OPEX Fitness, Legion Athletics)\n- **Advanced Training Techniques:** The implementation of advanced training techniques can provide additional stimulus to optimize chest muscle growth and further promote hypertrophy. (Source: BOXROX)\n\n## Sources\n- Complete Chest Training Guide | RP Strength (https://rpstrength.com)\n- Best Chest Exercises For Hypertrophy | Barbell Medicine (https://barbellmedicine.com)\n- Quick Reads: Best Way to Train for Chest Hypertrophy | BOXROX (https://boxrox.com)\n- How to Design a Hypertrophy Chest Workout | OPEX Fitness (https://opexfit.com)\n- Best Hypertrophy Chest Workout | Men's Journal - Men's Journal (https://mensjournal.com)\n- The 10 Best Chest Exercises for Muscle & Strength – StrengthLog (https://strengthlog.com)\n- Learn how to perform the best exercises targeting your Chest . | Fitbod (https://fitbod.me)\n- 8 Unorthodox Exercises to Force Chest Muscle Growth | BOXROX (https://boxrox.com)\n- Best Lower Chest Workout | 8 Best Exercises | ATHLEAN-X (https://learn.athleanx.com)\n- 8 Advanced Chest Training Techniques for Maximum Growth | BOXROX (https://boxrox.com)\n- Chest Workout Program for Mass: 7 Best Pec Exercises | Legion (https://legionathletics.com)\n\n## Information Gaps\n- Specific hypertrophy training techniques\n- Long-term hypertrophy progress tracking\n- Nutrition's role in chest hypertrophy\n\n"
+          }
+        ],
+        "role": "model"
+      },
+      "usageMetadata": {
+        "candidatesTokenCount": 737,
+        "promptTokenCount": 9104,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9104
+          }
+        ],
+        "thoughtsTokenCount": 82,
+        "totalTokenCount": 9923
+      },
+      "invocationId": "e-0f4394fd-3246-4256-abf8-aa551783d6f6",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "df6361ca-1353-42ec-8bde-f28065ef4fb7",
+      "timestamp": 1764529846.004118
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-cb49cdea-74c5-48c7-9688-3e63f64de831",
+              "args": {
+                "gaps": [
+                  {
+                    "priority": "high",
+                    "topic": "Specific hypertrophy training techniques",
+                    "suggested_query": "advanced chest hypertrophy training techniques scientific basis",
+                    "gap_type": "topical",
+                    "rationale": "While several sources discuss hypertrophy, a deeper dive into advanced techniques like rest-pause, drop sets, or myo-reps is missing."
+                  },
+                  {
+                    "suggested_query": "longitudinal studies chest hypertrophy programming progression",
+                    "topic": "Long-term hypertrophy progress tracking",
+                    "gap_type": "temporal",
+                    "rationale": "The results focus on best exercises and immediate programming, but lack information on how to structure long-term progression for sustained hypertrophy.",
+                    "priority": "medium"
+                  },
+                  {
+                    "gap_type": "topical",
+                    "suggested_query": "nutrition protein intake for muscle hypertrophy chest",
+                    "topic": "Nutrition's role in chest hypertrophy",
+                    "priority": "medium",
+                    "rationale": "While the query is about training, nutrition is a critical component of muscle hypertrophy that is not addressed in the provided results."
+                  }
+                ]
+              },
+              "name": "conduct_adaptive_gap_search"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 737,
+        "promptTokenCount": 9104,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9104
+          }
+        ],
+        "thoughtsTokenCount": 82,
+        "totalTokenCount": 9923
+      },
+      "invocationId": "e-0f4394fd-3246-4256-abf8-aa551783d6f6",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [],
+      "id": "6b26e40d-f170-4fd4-88b6-8dee4e358f34",
+      "timestamp": 1764529846.649985
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-9ea9119a-449d-4a84-b410-84002f30db4f",
+              "args": {
+                "originalFunctionCall": {
+                  "id": "adk-cb49cdea-74c5-48c7-9688-3e63f64de831",
+                  "args": {
+                    "gaps": [
+                      {
+                        "priority": "high",
+                        "topic": "Specific hypertrophy training techniques",
+                        "suggested_query": "advanced chest hypertrophy training techniques scientific basis",
+                        "gap_type": "topical",
+                        "rationale": "While several sources discuss hypertrophy, a deeper dive into advanced techniques like rest-pause, drop sets, or myo-reps is missing."
+                      },
+                      {
+                        "suggested_query": "longitudinal studies chest hypertrophy programming progression",
+                        "topic": "Long-term hypertrophy progress tracking",
+                        "gap_type": "temporal",
+                        "rationale": "The results focus on best exercises and immediate programming, but lack information on how to structure long-term progression for sustained hypertrophy.",
+                        "priority": "medium"
+                      },
+                      {
+                        "gap_type": "topical",
+                        "suggested_query": "nutrition protein intake for muscle hypertrophy chest",
+                        "topic": "Nutrition's role in chest hypertrophy",
+                        "priority": "medium",
+                        "rationale": "While the query is about training, nutrition is a critical component of muscle hypertrophy that is not addressed in the provided results."
+                      }
+                    ]
+                  },
+                  "name": "conduct_adaptive_gap_search"
+                },
+                "toolConfirmation": {
+                  "hint": "🔍 **Gap Research Approval**\n\nFound 3 information gaps:\n\n  1. [HIGH] Specific hypertrophy training techniques\n      Query: \"advanced chest hypertrophy training techniques scientific basis\"\n  2. [MEDIUM] Long-term hypertrophy progress tracking\n      Query: \"longitudinal studies chest hypertrophy programming progression\"\n  3. [MEDIUM] Nutrition's role in chest hypertrophy\n      Query: \"nutrition protein intake for muscle hypertrophy chest\"\n\n---\n**Reply with 'yes' to approve or 'no' to skip.**\n(Note: Type your response in the chat - button may not work due to ADK bug)",
+                  "confirmed": false,
+                  "payload": {
+                    "num_gaps": 3,
+                    "gaps": [
+                      {
+                        "priority": "high",
+                        "topic": "Specific hypertrophy training techniques",
+                        "suggested_query": "advanced chest hypertrophy training techniques scientific basis",
+                        "gap_type": "topical",
+                        "rationale": "While several sources discuss hypertrophy, a deeper dive into advanced techniques like rest-pause, drop sets, or myo-reps is missing."
+                      },
+                      {
+                        "suggested_query": "longitudinal studies chest hypertrophy programming progression",
+                        "topic": "Long-term hypertrophy progress tracking",
+                        "gap_type": "temporal",
+                        "rationale": "The results focus on best exercises and immediate programming, but lack information on how to structure long-term progression for sustained hypertrophy.",
+                        "priority": "medium"
+                      },
+                      {
+                        "gap_type": "topical",
+                        "suggested_query": "nutrition protein intake for muscle hypertrophy chest",
+                        "topic": "Nutrition's role in chest hypertrophy",
+                        "priority": "medium",
+                        "rationale": "While the query is about training, nutrition is a critical component of muscle hypertrophy that is not addressed in the provided results."
+                      }
+                    ],
+                    "operation": "adaptive_gap_research"
+                  }
+                }
+              },
+              "name": "adk_request_confirmation"
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-0f4394fd-3246-4256-abf8-aa551783d6f6",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [
+        "adk-9ea9119a-449d-4a84-b410-84002f30db4f"
+      ],
+      "id": "dd2d3543-1d96-4ba4-a0ac-58569bce3aa9",
+      "timestamp": 1764529846.655733
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-cb49cdea-74c5-48c7-9688-3e63f64de831",
+              "name": "conduct_adaptive_gap_search",
+              "response": {
+                "result": "{\"status\": \"pending\", \"message\": \"\\u23f8\\ufe0f Awaiting approval for 3 gap searches. Reply 'yes' or 'no' in the chat.\", \"requires_action\": false, \"gaps\": [{\"priority\": \"high\", \"topic\": \"Specific hypertrophy training techniques\", \"suggested_query\": \"advanced chest hypertrophy training techniques scientific basis\", \"gap_type\": \"topical\", \"rationale\": \"While several sources discuss hypertrophy, a deeper dive into advanced techniques like rest-pause, drop sets, or myo-reps is missing.\"}, {\"suggested_query\": \"longitudinal studies chest hypertrophy programming progression\", \"topic\": \"Long-term hypertrophy progress tracking\", \"gap_type\": \"temporal\", \"rationale\": \"The results focus on best exercises and immediate programming, but lack information on how to structure long-term progression for sustained hypertrophy.\", \"priority\": \"medium\"}, {\"gap_type\": \"topical\", \"suggested_query\": \"nutrition protein intake for muscle hypertrophy chest\", \"topic\": \"Nutrition's role in chest hypertrophy\", \"priority\": \"medium\", \"rationale\": \"While the query is about training, nutrition is a critical component of muscle hypertrophy that is not addressed in the provided results.\"}]}"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-0f4394fd-3246-4256-abf8-aa551783d6f6",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {
+          "hitl_confirmation_requested": true
+        },
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {
+          "adk-cb49cdea-74c5-48c7-9688-3e63f64de831": {
+            "hint": "🔍 **Gap Research Approval**\n\nFound 3 information gaps:\n\n  1. [HIGH] Specific hypertrophy training techniques\n      Query: \"advanced chest hypertrophy training techniques scientific basis\"\n  2. [MEDIUM] Long-term hypertrophy progress tracking\n      Query: \"longitudinal studies chest hypertrophy programming progression\"\n  3. [MEDIUM] Nutrition's role in chest hypertrophy\n      Query: \"nutrition protein intake for muscle hypertrophy chest\"\n\n---\n**Reply with 'yes' to approve or 'no' to skip.**\n(Note: Type your response in the chat - button may not work due to ADK bug)",
+            "confirmed": false,
+            "payload": {
+              "num_gaps": 3,
+              "gaps": [
+                {
+                  "priority": "high",
+                  "topic": "Specific hypertrophy training techniques",
+                  "suggested_query": "advanced chest hypertrophy training techniques scientific basis",
+                  "gap_type": "topical",
+                  "rationale": "While several sources discuss hypertrophy, a deeper dive into advanced techniques like rest-pause, drop sets, or myo-reps is missing."
+                },
+                {
+                  "suggested_query": "longitudinal studies chest hypertrophy programming progression",
+                  "topic": "Long-term hypertrophy progress tracking",
+                  "gap_type": "temporal",
+                  "rationale": "The results focus on best exercises and immediate programming, but lack information on how to structure long-term progression for sustained hypertrophy.",
+                  "priority": "medium"
+                },
+                {
+                  "gap_type": "topical",
+                  "suggested_query": "nutrition protein intake for muscle hypertrophy chest",
+                  "topic": "Nutrition's role in chest hypertrophy",
+                  "priority": "medium",
+                  "rationale": "While the query is about training, nutrition is a critical component of muscle hypertrophy that is not addressed in the provided results."
+                }
+              ],
+              "operation": "adaptive_gap_research"
+            }
+          }
+        }
+      },
+      "id": "fda93e05-a0bf-49d8-a50b-853aa84d36c0",
+      "timestamp": 1764529846.65487
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "approved"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-ef4ffdd9-1df8-4178-bd6c-a012c70ee04b",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "044a318e-2159-438f-b143-9a808041bda1",
+      "timestamp": 1764529860.622639
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-d203859e-cb6a-4f51-8768-8be219c1a1d1",
+              "args": {
+                "gaps": [
+                  {
+                    "rationale": "While several sources discuss hypertrophy, a deeper dive into advanced techniques like rest-pause, drop sets, or myo-reps is missing.",
+                    "priority": "high",
+                    "gap_type": "topical",
+                    "topic": "Specific hypertrophy training techniques",
+                    "suggested_query": "advanced chest hypertrophy training techniques scientific basis"
+                  },
+                  {
+                    "priority": "medium",
+                    "gap_type": "temporal",
+                    "rationale": "The results focus on best exercises and immediate programming, but lack information on how to structure long-term progression for sustained hypertrophy.",
+                    "suggested_query": "longitudinal studies chest hypertrophy programming progression",
+                    "topic": "Long-term hypertrophy progress tracking"
+                  },
+                  {
+                    "suggested_query": "nutrition protein intake for muscle hypertrophy chest",
+                    "priority": "medium",
+                    "topic": "Nutrition's role in chest hypertrophy",
+                    "gap_type": "topical",
+                    "rationale": "While the query is about training, nutrition is a critical component of muscle hypertrophy that is not addressed in the provided results."
+                  }
+                ],
+                "user_decision": "approved"
+              },
+              "name": "conduct_adaptive_gap_search"
+            },
+            "thoughtSignature": "CikBcsjafCyPqQHPdc_IJ9UYMXWRqZwwyOcXrclBMOOEhVuYUctm40LOxAp9AXLI2nxkwMMQasN4oFV1vspiSMaVrCdQmzBOCYds_m936lJBlBf8rOuyyojMWW4EKrYBjijiinqkalWORAMNqtyYBfO8DFJX_hPJnRFfzg4QGeONwpmR3BRzuIeTluLmnlvr0imjN9DSerWqeYcKkiwBH1aiHpkS-tUyjooK6QEBcsjafHtQ1X7sfRPDcvJlDzK0jWAz-FCfeh1YTrOC8WVHl4TsPD2soHqetCwmwhudgzVBhXWdYzAuNy_Jx_cyV0XGxFhNBnpTzLfbwMdlgom7S3UFvB1mFYUzOtf8ruoXqcX8w8Hulq_18KMjDRkXycpc8icA4v3HKhXF0dI9vDQoL5VMfjknNDKq9VJz5urelDgYEsQhGWRpW2pYaVf30EJ2DMpufGi1HrUefJuvgpHWcLE1t1ANKwB-wF04dRyq6laTiRw-xeS9qCtXDm0id38DCQlqzHzMVzM_Ckrsbx8YNpjTG84JTAo2AXLI2nwj1bj2ReK7Ht2zuPey6o_c-u5HFQmtVL-ENf7ZYWiY3cLfMzaUzD4KbIn6sGUO4lBx"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 239,
+        "promptTokenCount": 10018,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 10018
+          }
+        ],
+        "thoughtsTokenCount": 75,
+        "totalTokenCount": 10332
+      },
+      "invocationId": "e-ef4ffdd9-1df8-4178-bd6c-a012c70ee04b",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [],
+      "id": "b4e53202-374f-4f56-95cb-7bb103be65ba",
+      "timestamp": 1764529860.62833
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-d203859e-cb6a-4f51-8768-8be219c1a1d1",
+              "name": "conduct_adaptive_gap_search",
+              "response": {
+                "result": "{\"status\": \"approved\", \"message\": \"\\u2705 Approved adaptive gap research for 3 gaps.\", \"requires_action\": true, \"gaps_to_research\": [{\"rationale\": \"While several sources discuss hypertrophy, a deeper dive into advanced techniques like rest-pause, drop sets, or myo-reps is missing.\", \"priority\": \"high\", \"gap_type\": \"topical\", \"topic\": \"Specific hypertrophy training techniques\", \"suggested_query\": \"advanced chest hypertrophy training techniques scientific basis\"}, {\"priority\": \"medium\", \"gap_type\": \"temporal\", \"rationale\": \"The results focus on best exercises and immediate programming, but lack information on how to structure long-term progression for sustained hypertrophy.\", \"suggested_query\": \"longitudinal studies chest hypertrophy programming progression\", \"topic\": \"Long-term hypertrophy progress tracking\"}, {\"suggested_query\": \"nutrition protein intake for muscle hypertrophy chest\", \"priority\": \"medium\", \"topic\": \"Nutrition's role in chest hypertrophy\", \"gap_type\": \"topical\", \"rationale\": \"While the query is about training, nutrition is a critical component of muscle hypertrophy that is not addressed in the provided results.\"}], \"execution_mode\": \"parallel\", \"max_concurrent\": 3, \"next_steps\": [\"Execute gap research in parallel mode\", \"Call parallel_gap_researcher with all gap queries\", \"Incorporate results into final synthesis\"]}"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-ef4ffdd9-1df8-4178-bd6c-a012c70ee04b",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {
+          "hitl_confirmation_requested": false,
+          "adaptive_gaps": [
+            {
+              "rationale": "While several sources discuss hypertrophy, a deeper dive into advanced techniques like rest-pause, drop sets, or myo-reps is missing.",
+              "priority": "high",
+              "gap_type": "topical",
+              "topic": "Specific hypertrophy training techniques",
+              "suggested_query": "advanced chest hypertrophy training techniques scientific basis"
+            },
+            {
+              "priority": "medium",
+              "gap_type": "temporal",
+              "rationale": "The results focus on best exercises and immediate programming, but lack information on how to structure long-term progression for sustained hypertrophy.",
+              "suggested_query": "longitudinal studies chest hypertrophy programming progression",
+              "topic": "Long-term hypertrophy progress tracking"
+            },
+            {
+              "suggested_query": "nutrition protein intake for muscle hypertrophy chest",
+              "priority": "medium",
+              "topic": "Nutrition's role in chest hypertrophy",
+              "gap_type": "topical",
+              "rationale": "While the query is about training, nutrition is a critical component of muscle hypertrophy that is not addressed in the provided results."
+            }
+          ],
+          "gap_research_approved": true
+        },
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "b0e49c73-5185-49e6-82e2-4e535764be4a",
+      "timestamp": 1764529864.950936
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "✅ Starting parallel gap research..."
+          }
+        ],
+        "role": "model"
+      },
+      "usageMetadata": {
+        "candidatesTokenCount": 58,
+        "promptTokenCount": 10664,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 10664
+          }
+        ],
+        "totalTokenCount": 10722
+      },
+      "invocationId": "e-ef4ffdd9-1df8-4178-bd6c-a012c70ee04b",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "8c971547-6823-4a98-af62-cd0c84943a60",
+      "timestamp": 1764529866.792911
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-df8eb7d9-11f1-4fe5-99e4-44e85d357c02",
+              "args": {
+                "request": "Research these gaps:\n1. advanced chest hypertrophy training techniques scientific basis\n2. longitudinal studies chest hypertrophy programming progression\n3. nutrition protein intake for muscle hypertrophy chest"
+              },
+              "name": "parallel_gap_researcher"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 58,
+        "promptTokenCount": 10664,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 10664
+          }
+        ],
+        "totalTokenCount": 10722
+      },
+      "invocationId": "e-ef4ffdd9-1df8-4178-bd6c-a012c70ee04b",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [],
+      "id": "4ecd90a6-e825-4798-a758-e786b283aca3",
+      "timestamp": 1764529867.109824
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-df8eb7d9-11f1-4fe5-99e4-44e85d357c02",
+              "name": "parallel_gap_researcher",
+              "response": {
+                "result": "**Quality Assessment of Search Results**\n\nHere is the evaluation of each search result based on credibility, relevance, recency, and depth.\n\n---\n\n### **Research Question 1: advanced chest hypertrophy training techniques scientific basis**\n\n**Results from Query: advanced chest hypertrophy training scientific principles**\n\n1.  **Maximizing Muscle Hypertrophy: A Systematic Review of Advanced ...**\n    *   URL: `https://pmc.ncbi.nlm.nih.gov/articles/PMC6950543/`\n    *   Credibility: 10 (PubMed Central, peer-reviewed systematic review)\n    *   Relevance: 10 (Directly addresses advanced resistance training for hypertrophy and its scientific basis.)\n    *   Recency: Published 2019, which is good for a systematic review.\n    *   Depth: High (Systematic review synthesizes a broad range of scientific literature.)\n    *   **Overall: 10**\n\n2.  **5 Advanced Chest Workouts Using Proven Scientific Techniques**\n    *   URL: `https://www.muscleandstrength.com/articles/5-advanced-chest-workouts-using-scientific-proven-techniques`\n    *   Credibility: 6 (Commercial fitness website, generally provides useful content but not an academic source.)\n    *   Relevance: 9 (Provides specific advanced techniques backed by science, directly relevant to the query.)\n    *   Recency: Unclear without visiting.\n    *   Depth: Medium (Practical application focused rather than deep scientific analysis.)\n    *   **Overall: 7.5**\n\n3.  **Complete Chest Training Guide - RP Strength**\n    *   URL: `https://rpstrength.com/blogs/articles/chest-hypertrophy-training-tips`\n    *   Credibility: 8 (RP Strength is known for science-based content from experts like Dr. Mike Israetel, despite being a commercial site.)\n    *   Relevance: 10 (Offers a comprehensive, science-based guide on chest hypertrophy training, including programming strategies.)\n    *   Recency: Unclear without visiting.\n    *   Depth: High (Described as a \"comprehensive guide.\")\n    *   **Overall: 9**\n\n4.  **Best Exercises for Chest Muscle Growth (Science-Based)**\n    *   URL: `https://www.vitalexplore.com/best-exercises-for-chest-muscle-growth/`\n    *   Credibility: 5 (General health/fitness blog, less formal credibility.)\n    *   Relevance: 9 (Explains the scientific principles behind chest muscle growth and factors like exercise selection and training variables.)\n    *   Recency: Unclear without visiting.\n    *   Depth: Medium (Explains key principles.)\n    *   **Overall: 7**\n\n5.  **Maximizing Chest Gains: Hypertrophy Training Tips**\n    *   URL: `https://dr-muscle.com/maximizing-chest-gains-hypertrophy-training-tips/`\n    *   Credibility: 5 (Commercial app/platform, claims \"expert guide\" but not an academic publisher.)\n    *   Relevance: 9 (Provides an expert guide with science-backed hypertrophy training tips, including methods like progressive overload.)\n    *   Recency: Unclear without visiting.\n    *   Depth: Medium (Focuses on practical tips.)\n    *   **Overall: 7**\n\n**Results from Query: evidence-based chest muscle growth techniques research**\n\n6.  **Maximizing Muscle Hypertrophy: A Systematic Review of Advanced ...**\n    *   URL: `https://pmc.ncbi.nlm.nih.gov/articles/PMC6950543/`\n    *   Credibility: 10 (PubMed Central, peer-reviewed systematic review)\n    *   Relevance: 10 (Explicitly focused on research into advanced techniques for muscle hypertrophy.)\n    *   Recency: Published 2019.\n    *   Depth: High (Systematic review.)\n    *   **Overall: 10**\n\n7.  **Chest Stretch Mediated Muscle Hypertrophy Without Weights Study ...**\n    *   URL: `https://evidencebasedmuscle.com/chest-stretch-mediated-muscle-hypertrophy/`\n    *   Credibility: 7 (Specialized blog aiming for evidence-based content, but not a peer-reviewed journal.)\n    *   Relevance: 8 (Introduces a specific technique (stretch-mediated hypertrophy) with a study, though \"without weights\" might be a niche aspect.)\n    *   Recency: Unclear without visiting.\n    *   Depth: Medium (Focuses on one specific technique.)\n    *   **Overall: 7.5**\n\n8.  **5 Chest Training Hacks for Quicker Muscle Growth - BOXROX**\n    *   URL: `https://www.boxrox.com/5-chest-training-hacks-for-quicker-muscle-growth/`\n    *   Credibility: 6 (Fitness news/article website, often good content but not academic.)\n    *   Relevance: 9 (Offers evidence-based training hacks backed by scientific research for chest muscle growth.)\n    *   Recency: Unclear without visiting.\n    *   Depth: Medium (Practical hacks with scientific backing.)\n    *   **Overall: 7.5**\n\n9.  **Chest Gains Unleashed: 15 Science-Backed Exercises for Massive Muscle ...**\n    *   URL: `https://mindmuscleperfection.com/chest-gains-unleashed-15-science-backed-exercises-for-massive-muscle-growth`\n    *   Credibility: 4 (Personal/fitness blog, lower credibility.)\n    *   Relevance: 9 (Provides a guide to science-backed exercises for chest muscle growth.)\n    *   Recency: Unclear without visiting.\n    *   Depth: Medium (Lists exercises and tips.)\n    *   **Overall: 6.5**\n\n---\n\n### **Research Question 2: longitudinal studies chest hypertrophy programming progression**\n\n**Results from Query: longitudinal studies chest muscle hypertrophy training progression**\n\n10. **Longitudinal study - Wikipedia**\n    *   URL: `https://en.wikipedia.org/wiki/Longitudinal_study`\n    *   Credibility: 6 (Wikipedia is a general encyclopedia, useful for definitions but not primary research.)\n    *   Relevance: 1 (Defines \"longitudinal study\" but provides no specific studies on chest hypertrophy programming progression.)\n    *   Recency: Regularly updated.\n    *   Depth: Low (Definitional.)\n    *   **Overall: 3.5** - Low Quality - Consider Removing\n\n11. **LONGITUDINAL Definition & Meaning - Merriam-Webster**\n    *   URL: `https://www.merriam-webster.com/dictionary/longitudinal`\n    *   Credibility: 8 (Highly credible dictionary.)\n    *   Relevance: 1 (Definitional, not relevant to specific studies.)\n    *   Recency: Stable definition.\n    *   Depth: Low (Definitional.)\n    *   **Overall: 4.5** - Low Quality - Consider Removing\n\n12. **LONGITUDINAL Definition & Meaning | Dictionary.com**\n    *   URL: `https://www.dictionary.com/browse/longitudinal`\n    *   Credibility: 7 (Credible dictionary.)\n    *   Relevance: 1 (Definitional, not relevant to specific studies.)\n    *   Recency: Stable definition.\n    *   Depth: Low (Definitional.)\n    *   **Overall: 4** - Low Quality - Consider Removing\n\n13. **LONGITUDINAL | English meaning - Cambridge Dictionary**\n    *   URL: `https://dictionary.cambridge.org/dictionary/english/longitudinal`\n    *   Credibility: 8 (Highly credible dictionary.)\n    *   Relevance: 1 (Definitional, not relevant to specific studies.)\n    *   Recency: Stable definition.\n    *   Depth: Low (Definitional.)\n    *   **Overall: 4.5** - Low Quality - Consider Removing\n\n14. **Longitudinal - definition of longitudinal by The Free Dictionary**\n    *   URL: `https://www.thefreedictionary.com/longitudinal`\n    *   Credibility: 7 (Credible dictionary.)\n    *   Relevance: 1 (Definitional, not relevant to specific studies.)\n    *   Recency: Stable definition.\n    *   Depth: Low (Definitional.)\n    *   **Overall: 4** - Low Quality - Consider Removing\n\n**Results from Query: progressive overload chest hypertrophy long term studies**\n\n15. **Progressive overload - Wikipedia**\n    *   URL: `https://en.wikipedia.org/wiki/Progressive_overload`\n    *   Credibility: 6 (Wikipedia is good for basic information, but not a primary research source.)\n    *   Relevance: 9 (Explains the principle of progressive overload, crucial for long-term hypertrophy programming.)\n    *   Recency: Regularly updated.\n    *   Depth: Medium (Explanatory.)\n    *   **Overall: 7.5**\n\n16. **When to Use Specific Progressive Overload Strategies • Stronger by...**\n    *   URL: `https://www.strongerbyscience.com/progressive-overload-strategies/`\n    *   Credibility: 9 (Stronger by Science is a highly reputable source in evidence-based fitness, extensively referencing scientific literature.)\n    *   Relevance: 10 (Discusses various progressive overload strategies for maximizing gains, highly relevant to programming progression for long-term results.)\n    *   Recency: Unclear without visiting, but content tends to be robust and updated.\n    *   Depth: High (In-depth discussion of strategies.)\n    *   **Overall: 9.5**\n\n17. **3 Best Exercises to Build a Thicker Upper Chest | BOXROX**\n    *   URL: `https://www.boxrox.com/3-best-exercises-to-build-a-thicker-upper-chest-p82562172/`\n    *   Credibility: 6 (Fitness news/article website.)\n    *   Relevance: 8 (Mentions progressive overload as essential for hypertrophy and provides some programming context.)\n    *   Recency: Unclear without visiting.\n    *   Depth: Medium (Practical advice.)\n    *   **Overall: 7**\n\n18. **The BEST Chest Exercises for Building Muscle (33 Studies )... | Recapio**\n    *   URL: `https://recapio.com/digest/the-best-chest-exercises-for-building-muscle-33-studies-by-house-of-hypertrophy`\n    *   Credibility: 6 (Content aggregation/summary site, references studies but not an academic publisher itself.)\n    *   Relevance: 9 (Emphasizes the importance of progressive overload for long-term hypertrophy gains, citing studies.)\n    *   Recency: Unclear without visiting.\n    *   Depth: Medium (Summary of research.)\n    *   **Overall: 7.5**\n\n19. **Effects of Resistance Training Overload Progression Protocols on...**\n    *   URL: `https://pubmed.ncbi.nlm.nih.gov/38286426/`\n    *   Credibility: 10 (PubMed, direct research study.)\n    *   Relevance: 10 (Direct research study comparing effects of progressive overload protocols, highly relevant to programming progression.)\n    *   Recency: Published 2024 Feb 1, very recent.\n    *   Depth: High (Primary research.)\n    *   **Overall: 10**\n\n---\n\n### **Research Question 3: nutrition protein intake for muscle hypertrophy chest**\n\n**Results from Query: optimal protein intake chest muscle hypertrophy research**\n\n20. **Relationship between protein intake and resistance-training-induced...**\n    *   URL: `https://examine.com/research-feed/study/0AKVbd/`\n    *   Credibility: 9 (Examine.com is a highly reputable, evidence-based nutrition website that summarizes scientific studies.)\n    *   Relevance: 10 (Mentions protein intake and resistance training, with a link to an optimal protein intake guide.)\n    *   Recency: Content on Examine.com is frequently updated, and links to studies.\n    *   Depth: High (Summarizes research findings.)\n    *   **Overall: 9.5**\n\n21. **5 Secrets to Build a Stronger and More Attractive Lower Chest**\n    *   URL: `https://www.boxrox.com/5-secrets-to-build-a-stronger-and-more-attractive-lower-chest-p82557852/`\n    *   Credibility: 6 (Fitness news/article website.)\n    *   Relevance: 9 (Explicitly states that research shows optimal protein intake is essential for muscle repair and hypertrophy, citing sources.)\n    *   Recency: Unclear without visiting.\n    *   Depth: Medium (Practical advice with research mentions.)\n    *   **Overall: 7.5**\n\n22. **Nutritional interventions in muscle hypertrophy research ...**\n    *   URL: `https://pmc.ncbi.nlm.nih.gov/articles/PMC12317481/`\n    *   Credibility: 10 (PubMed Central, peer-reviewed academic review.)\n    *   Relevance: 9 (Highlights the importance of appropriate nutritional strategies, including protein, for muscle hypertrophy in research.)\n    *   Recency: Published 2024 Jan 22, very recent.\n    *   Depth: High (Academic review.)\n    *   **Overall: 9.5**\n\n23. **Dietary-energy/ protein Optimum For N-balance And Muscle ...**\n    *   URL: `https://www.researchgate.net/publication/246653767_Dietary-energyprotein_Optimum_For_N-balance_And_Muscle_Hypertrophy_During_Two_Weeks_Of_Resistance_Training_2318`\n    *   Credibility: 9 (Research paper hosted on ResearchGate, implying scientific rigor.)\n    *   Relevance: 10 (Directly addresses dietary protein for muscle hypertrophy and optimal restitution during resistance training, a primary research study.)\n    *   Recency: Published 2010, less recent but still valuable for foundational research.\n    *   Depth: High (Primary research study.)\n    *   **Overall: 9.5**\n\n24. **Effects of 12 weeks muscle hipertrophy training**\n    *   URL: `https://addi.ehu.es/bitstream/handle/10810/13475/TFG.Mikel+Giacchi+Legarra,+2014+07+01+(1).pdf?sequence=2`\n    *   Credibility: 7 (University domain, likely a student thesis/final project, which is academic but not peer-reviewed literature.)\n    *   Relevance: 9 (Discusses optimal daily protein intake for muscle gain related to resistance training.)\n    *   Recency: Published 2014.\n    *   Depth: High (Academic thesis.)\n    *   **Overall: 8**\n\n**Results from Query: daily protein requirements muscle growth scientific recommendations**\n\n25. **How much protein do you need to build muscle ? | Tom's Guide**\n    *   URL: `https://www.tomsguide.com/wellness/fitness/how-much-protein-do-you-need-to-build-muscle`\n    *   Credibility: 5 (Tech/product review site, not a primary health or fitness authority.)\n    *   Relevance: 9 (Provides general guidelines for daily protein intake for muscle growth and repair.)\n    *   Recency: Unclear without visiting.\n    *   Depth: Medium (General guidelines.)\n    *   **Overall: 7**\n\n26. **How much protein do you really need to get strong?**\n    *   URL: `https://www.bbc.com/future/article/20250212-how-much-protein-do-you-really-need-to-get-strong`\n    *   Credibility: 8 (BBC Future is a reputable news organization with a science/future focus.)\n    *   Relevance: 10 (Offers specific recommendations for protein intake per meal to meet daily requirements for muscle growth.)\n    *   Recency: Snippet indicates a future date (2025), assuming it's a valid current article, it's very recent.\n    *   Depth: High (Specific, practical recommendations.)\n    *   **Overall: 9**\n\n27. **Protein Intake — How Much Protein Should You Eat per Day?**\n    *   URL: `https://www.healthline.com/nutrition/how-much-protein-per-day`\n    *   Credibility: 8 (Healthline is a well-known health information website, generally reliable and often references studies.)\n    *   Relevance: 10 (Comprehensive article explaining daily protein intake recommendations.)\n    *   Recency: Healthline articles are typically kept up-to-date.\n    *   Depth: High (Comprehensive.)\n    *   **Overall: 9**\n\n28. **Protein Requirements by Age: A Complete Guide – StrengthLog**\n    *   URL: `https://www.strengthlog.com/protein-requirements-by-age/`\n    *   Credibility: 7 (Fitness training app/blog, provides specific, research-backed recommendations.)\n    *   Relevance: 10 (Provides specific scientific recommendations for daily protein intake (g/kg/day) for optimal muscle development.)\n    *   Recency: Unclear without visiting.\n    *   Depth: High (Specific recommendations.)\n    *   **Overall: 8.5**\n\n29. **Are you getting too much protein - Mayo Clinic Health System**\n    *   URL: `https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/are-you-getting-too-much-protein`\n    *   Credibility: 9 (Mayo Clinic Health System is a highly reputable medical institution.)\n    *   Relevance: 8 (Discusses protein intake but also emphasizes the role of exercise, making it slightly less solely focused on optimal intake for hypertrophy alone.)\n    *   Recency: Unclear without visiting.\n    *   Depth: Medium (Explanatory.)\n    *   **Overall: 8.5**\n\n---\n\n### **Summary of Low Quality Results**\n\nThe following results score below 6/10 overall and should be considered for removal:\n\n*   **Longitudinal study - Wikipedia**\n    *   URL: `https://en.wikipedia.org/wiki/Longitudinal_study`\n    *   Overall: 3.5\n*   **LONGITUDINAL Definition & Meaning - Merriam-Webster**\n    *   URL: `https://www.merriam-webster.com/dictionary/longitudinal`\n    *   Overall: 4.5\n*   **LONGITUDINAL Definition & Meaning | Dictionary.com**\n    *   URL: `https://www.dictionary.com/browse/longitudinal`\n    *   Overall: 4\n*   **LONGITUDINAL | English meaning - Cambridge Dictionary**\n    *   URL: `https://dictionary.cambridge.org/dictionary/english/longitudinal`\n    *   Overall: 4.5\n*   **Longitudinal - definition of longitudinal by The Free Dictionary**\n    *   URL: `https://www.thefreedictionary.com/longitudinal`\n    *   Overall: 4\n\nThese results are purely definitional for \"longitudinal,\" failing to provide any specific studies or information related to chest hypertrophy programming progression, which was the core of the research question.\n\n---\n\n### **Top 3 Highest-Quality Sources**\n\n1.  **Maximizing Muscle Hypertrophy: A Systematic Review of Advanced ...**\n    *   URL: `https://pmc.ncbi.nlm.nih.gov/articles/PMC6950543/`\n    *   Overall: 10\n    *   *Rationale: A peer-reviewed systematic review from PubMed Central directly addresses advanced training techniques and their scientific basis, offering the highest level of scientific evidence.*\n\n2.  **Effects of Resistance Training Overload Progression Protocols on...**\n    *   URL: `https://pubmed.ncbi.nlm.nih.gov/38286426/`\n    *   Overall: 10\n    *   *Rationale: A very recent (2024) primary research study from PubMed directly investigates the effects of progressive overload protocols, which is highly relevant to longitudinal programming progression.*\n\n3.  **When to Use Specific Progressive Overload Strategies • Stronger by...**\n    *   URL: `https://www.strongerbyscience.com/progressive-overload-strategies/`\n    *   Overall: 9.5\n    *   *Rationale: Stronger by Science is an exceptionally reputable source for evidence-based fitness. This article provides in-depth, practical strategies for progressive overload, directly addressing programming progression, and is known for its rigorous scientific backing.*"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-ef4ffdd9-1df8-4178-bd6c-a012c70ee04b",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "4b9deaad-9223-496f-880a-dd8b01eaa802",
+      "timestamp": 1764530024.489024
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "📝 Phase 5: Generating comprehensive final report..."
+          }
+        ],
+        "role": "model"
+      },
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9925
+          }
+        ],
+        "cachedContentTokenCount": 9925,
+        "candidatesTokenCount": 2841,
+        "promptTokenCount": 15868,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 15868
+          }
+        ],
+        "thoughtsTokenCount": 57,
+        "totalTokenCount": 18766
+      },
+      "invocationId": "e-ef4ffdd9-1df8-4178-bd6c-a012c70ee04b",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "3b0d69fc-a757-4010-907a-37278a0f8a45",
+      "timestamp": 1764530028.069713
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-6914d726-8a4c-4667-828d-690d2db4c49e",
+              "args": {
+                "request": "Initial research on 'chest and hypertrophy' provided these quality-assessed search results:\n\n**1. Complete Chest Training Guide | RP Strength**\n*   **Source:** RP Strength (rpstrength.com) is a highly reputable, science-based strength and nutrition coaching company founded by Dr. Mike Israetel, a prominent figure in exercise science.\n*   **Relevance:** Directly addresses chest hypertrophy principles, offering a science-based guide on volume, exercise selection, and programming for maximum development.\n*   **Credibility:** 9/10\n\n**2. Best Chest Exercises For Hypertrophy | Barbell Medicine**\n*   **Source:** Barbell Medicine (barbellmedicine.com) is a highly respected organization providing evidence-based information on strength training, nutrition, and health, often run by medical professionals and PhDs.\n*   **Relevance:** Explicitly focuses on prioritizing exercises for chest muscle hypertrophy to maximize results.\n*   **Credibility:** 9/10\n\n**3. Quick Reads: Best Way to Train for Chest Hypertrophy | BOXROX**\n*   **Source:** BOXROX (boxrox.com) is a popular fitness news and training website. The snippet mentions \"personal experience plus 9 studies published recently.\"\n*   **Relevance:** Directly addresses the best ways to train for chest hypertrophy.\n*   **Credibility:** 7/10\n\n**4. How to Design a Hypertrophy Chest Workout | OPEX Fitness**\n*   **Source:** OPEX Fitness (opexfit.com) is a well-regarded coaching education and certification company.\n*   **Relevance:** Provides guidance on designing a chest workout specifically for hypertrophy.\n*   **Credibility:** 8/10\n\n**5. Best Hypertrophy Chest Workout | Men's Journal - Men's Journal**\n*   **Source:** Men's Journal (mensjournal.com) is a well-established mainstream lifestyle magazine.\n*   **Relevance:** Directly offers an \"Ultimate Hypertrophy Workout\" for the chest.\n*   **Credibility:** 6/10\n\n**6. The 10 Best Chest Exercises for Muscle & Strength – StrengthLog**\n*   **Source:** StrengthLog (strengthlog.com) is a reputable fitness app and content platform.\n*   **Relevance:** Explicitly lists and describes chest exercises for muscle growth and discusses chest anatomy.\n*   **Credibility:** 7/10\n\n**7. Learn how to perform the best exercises targeting your Chest . | Fitbod**\n*   **Source:** Fitbod (fitbod.me) is a popular fitness app.\n*   **Relevance:** Provides a comprehensive list of chest exercises and mentions how they contribute to muscle activation and growth.\n*   **Credibility:** 6/10\n\n**8. 8 Unorthodox Exercises to Force Chest Muscle Growth | BOXROX**\n*   **Source:** BOXROX (boxrox.com).\n*   **Relevance:** Focuses on specific exercises for chest muscle growth, albeit \"unorthodox\" ones.\n*   **Credibility:** 7/10\n\n**9. Best Lower Chest Workout | 8 Best Exercises | ATHLEAN-X**\n*   **Source:** ATHLEAN-X (learn.athleanx.com) is a popular fitness brand led by Jeff Cavaliere, a physical therapist and strength coach.\n*   **Relevance:** Specifically targets lower chest exercises for muscle growth, a component of overall chest hypertrophy.\n*   **Credibility:** 8/10\n\n**10. 8 Advanced Chest Training Techniques for Maximum Growth | BOXROX**\n*   **Source:** BOXROX (boxrox.com).\n*   **Relevance:** Explicitly focuses on advanced techniques to maximize chest muscle growth and hypertrophy.\n*   **Credibility:** 7/10\n\n**11. Chest Workout Program for Mass: 7 Best Pec Exercises | Legion**\n*   **Source:** Legion Athletics (legionathletics.com) is a supplement and content company founded by Mike Matthews.\n*   **Relevance:** Provides practical, research-backed advice on workout frequency for maximizing chest growth.\n*   **Credibility:** 8/10\n\n\n**Gap Research Results:**\n\n### Research Question 1: advanced chest hypertrophy training techniques scientific basis\n\n**Results from Query: advanced chest hypertrophy training scientific principles**\n\n1.  **Maximizing Muscle Hypertrophy: A Systematic Review of Advanced ...**\n    *   URL: `https://pmc.ncbi.nlm.nih.gov/articles/PMC6950543/`\n    *   Credibility: 10 (PubMed Central, peer-reviewed systematic review)\n    *   Relevance: 10 (Directly addresses advanced resistance training for hypertrophy and its scientific basis.)\n    *   Recency: Published 2019, which is good for a systematic review.\n    *   Depth: High (Systematic review synthesizes a broad range of scientific literature.)\n    *   **Overall: 10**\n\n2.  **5 Advanced Chest Workouts Using Proven Scientific Techniques**\n    *   URL: `https://www.muscleandstrength.com/articles/5-advanced-chest-workouts-using-scientific-proven-techniques`\n    *   Credibility: 6 (Commercial fitness website)\n    *   Relevance: 9 (Provides specific advanced techniques backed by science.)\n    *   Depth: Medium\n    *   **Overall: 7.5**\n\n3.  **Complete Chest Training Guide - RP Strength**\n    *   URL: `https://rpstrength.com/blogs/articles/chest-hypertrophy-training-tips`\n    *   Credibility: 8 (RP Strength is known for science-based content)\n    *   Relevance: 10 (Offers a comprehensive, science-based guide on chest hypertrophy training.)\n    *   Depth: High\n    *   **Overall: 9**\n\n**Results from Query: evidence-based chest muscle growth techniques research**\n\n4.  **Maximizing Muscle Hypertrophy: A Systematic Review of Advanced ...**\n    *   URL: `https://pmc.ncbi.nlm.nih.gov/articles/PMC6950543/`\n    *   Credibility: 10 (PubMed Central, peer-reviewed systematic review)\n    *   Relevance: 10 (Explicitly focused on research into advanced techniques for muscle hypertrophy.)\n    *   Recency: Published 2019.\n    *   Depth: High\n    *   **Overall: 10**\n\n### Research Question 2: longitudinal studies chest hypertrophy programming progression\n\n**Results from Query: progressive overload chest hypertrophy long term studies**\n\n5.  **Progressive overload - Wikipedia**\n    *   URL: `https://en.wikipedia.org/wiki/Progressive_overload`\n    *   Credibility: 6 (Wikipedia is good for basic information)\n    *   Relevance: 9 (Explains the principle of progressive overload, crucial for long-term hypertrophy programming.)\n    *   Depth: Medium\n    *   **Overall: 7.5**\n\n6.  **When to Use Specific Progressive Overload Strategies • Stronger by...**\n    *   URL: `https://www.strongerbyscience.com/progressive-overload-strategies/`\n    *   Credibility: 9 (Stronger by Science is a highly reputable source in evidence-based fitness.)\n    *   Relevance: 10 (Discusses various progressive overload strategies for maximizing gains, highly relevant to programming progression for long-term results.)\n    *   Depth: High\n    *   **Overall: 9.5**\n\n7.  **Effects of Resistance Training Overload Progression Protocols on...**\n    *   URL: `https://pubmed.ncbi.nlm.nih.gov/38286426/`\n    *   Credibility: 10 (PubMed, direct research study.)\n    *   Relevance: 10 (Direct research study comparing effects of progressive overload protocols, highly relevant to programming progression.)\n    *   Recency: Published 2024 Feb 1, very recent.\n    *   Depth: High\n    *   **Overall: 10**\n\n### Research Question 3: nutrition protein intake for muscle hypertrophy chest\n\n**Results from Query: optimal protein intake chest muscle hypertrophy research**\n\n8.  **Relationship between protein intake and resistance-training-induced...**\n    *   URL: `https://examine.com/research-feed/study/0AKVbd/`\n    *   Credibility: 9 (Examine.com is a highly reputable, evidence-based nutrition website that summarizes scientific studies.)\n    *   Relevance: 10 (Mentions protein intake and resistance training, with a link to an optimal protein intake guide.)\n    *   Depth: High\n    *   **Overall: 9.5**\n\n9.  **Nutritional interventions in muscle hypertrophy research ...**\n    *   URL: `https://pmc.ncbi.nlm.nih.gov/articles/PMC12317481/`\n    *   Credibility: 10 (PubMed Central, peer-reviewed academic review.)\n    *   Relevance: 9 (Highlights the importance of appropriate nutritional strategies, including protein, for muscle hypertrophy in research.)\n    *   Recency: Published 2024 Jan 22, very recent.\n    *   Depth: High\n    *   **Overall: 9.5**\n\n10. **Dietary-energy/ protein Optimum For N-balance And Muscle ...**\n    *   URL: `https://www.researchgate.net/publication/246653767_Dietary-energyprotein_Optimum_For_N-balance_And_Muscle_Hypertrophy_During_Two_Weeks_Of_Resistance_Training_2318`\n    *   Credibility: 9 (Research paper hosted on ResearchGate, implying scientific rigor.)\n    *   Relevance: 10 (Directly addresses dietary protein for muscle hypertrophy and optimal restitution during resistance training, a primary research study.)\n    *   Recency: Published 2010, less recent but still valuable for foundational research.\n    *   Depth: High\n    *   **Overall: 9.5**\n\n**Results from Query: daily protein requirements muscle growth scientific recommendations**\n\n11. **How much protein do you really need to get strong?**\n    *   URL: `https://www.bbc.com/future/article/20250212-how-much-protein-do-you-really-need-to-get-strong`\n    *   Credibility: 8 (BBC Future is a reputable news organization with a science/future focus.)\n    *   Relevance: 10 (Offers specific recommendations for protein intake per meal to meet daily requirements for muscle growth.)\n    *   Depth: High\n    *   **Overall: 9**\n\n12. **Protein Intake — How Much Protein Should You Eat per Day?**\n    *   URL: `https://www.healthline.com/nutrition/how-much-protein-per-day`\n    *   Credibility: 8 (Healthline is a well-known health information website, generally reliable and often references studies.)\n    *   Relevance: 10 (Comprehensive article explaining daily protein intake recommendations.)\n    *   Depth: High\n    *   **Overall: 9**\n\n13. **Protein Requirements by Age: A Complete Guide – StrengthLog**\n    *   URL: `https://www.strengthlog.com/protein-requirements-by-age/`\n    *   Credibility: 7 (Fitness training app/blog, provides specific, research-backed recommendations.)\n    *   Relevance: 10 (Provides specific scientific recommendations for daily protein intake (g/kg/day) for optimal muscle development.)\n    *   Depth: High\n    *   **Overall: 8.5**"
+              },
+              "name": "research_synthesizer"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9925
+          }
+        ],
+        "cachedContentTokenCount": 9925,
+        "candidatesTokenCount": 2841,
+        "promptTokenCount": 15868,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 15868
+          }
+        ],
+        "thoughtsTokenCount": 57,
+        "totalTokenCount": 18766
+      },
+      "invocationId": "e-ef4ffdd9-1df8-4178-bd6c-a012c70ee04b",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [],
+      "id": "f63ff23e-8bfd-4815-930b-881b2a83c230",
+      "timestamp": 1764530037.34182
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-6914d726-8a4c-4667-828d-690d2db4c49e",
+              "name": "research_synthesizer",
+              "response": {
+                "result": "# Research Report: chest and hypertrophy\n\n## Executive Summary\nAchieving chest hypertrophy requires adherence to science-based training principles, including optimal exercise selection, adequate training volume, and the application of progressive overload. Advanced training techniques and sufficient protein intake are also critical components for maximizing muscle growth. Reputable sources provide comprehensive guidance on program design and nutritional strategies.\n\n## Key Findings\n- **Training Principles:** Effective chest hypertrophy training involves science-based principles, focusing on exercise selection, appropriate training volume, and frequency. High-quality sources recommend structured programming to maximize development.\n- **Exercise Selection:** Prioritizing exercises that effectively stimulate chest muscles is crucial. Specific exercises can target different areas of the chest (e.g., lower chest), and a variety of movements contribute to overall development.\n- **Advanced Training Techniques:** Advanced techniques can further enhance chest muscle growth. Systematic reviews and science-backed guides confirm the efficacy of various advanced resistance training methods for hypertrophy.\n- **Progressive Overload and Long-Term Progression:** Progressive overload is fundamental for long-term chest hypertrophy, requiring systematic increases in training stimulus. Recent research directly compares different progressive overload protocols and strategies for maximizing gains.\n- **Nutrition (Protein Intake):** Optimal protein intake is essential for supporting muscle protein synthesis and facilitating chest muscle hypertrophy. Scientific recommendations provide specific daily protein requirements (g/kg/day) and guidance on intake per meal for muscle growth.\n\n## Sources\n- Complete Chest Training Guide | RP Strength (https://rpstrength.com/blogs/articles/chest-hypertrophy-training-tips)\n- Best Chest Exercises For Hypertrophy | Barbell Medicine (barbellmedicine.com)\n- Quick Reads: Best Way to Train for Chest Hypertrophy | BOXROX (boxrox.com)\n- How to Design a Hypertrophy Chest Workout | OPEX Fitness (opexfit.com)\n- Best Hypertrophy Chest Workout | Men's Journal - Men's Journal (mensjournal.com)\n- The 10 Best Chest Exercises for Muscle & Strength – StrengthLog (strengthlog.com)\n- Learn how to perform the best exercises targeting your Chest . | Fitbod (fitbod.me)\n- 8 Unorthodox Exercises to Force Chest Muscle Growth | BOXROX (boxrox.com)\n- Best Lower Chest Workout | 8 Best Exercises | ATHLEAN-X (learn.athleanx.com)\n- 8 Advanced Chest Training Techniques for Maximum Growth | BOXROX (boxrox.com)\n- Chest Workout Program for Mass: 7 Best Pec Exercises | Legion (legionathletics.com)\n- Maximizing Muscle Hypertrophy: A Systematic Review of Advanced ... (https://pmc.ncbi.nlm.nih.gov/articles/PMC6950543/)\n- 5 Advanced Chest Workouts Using Proven Scientific Techniques (https://www.muscleandstrength.com/articles/5-advanced-chest-workouts-using-scientific-proven-techniques)\n- Complete Chest Training Guide - RP Strength (https://rpstrength.com/blogs/articles/chest-hypertrophy-training-tips)\n- Progressive overload - Wikipedia (https://en.wikipedia.org/wiki/Progressive_overload)\n- When to Use Specific Progressive Overload Strategies • Stronger by... (https://www.strongerbyscience.com/progressive-overload-strategies/)\n- Effects of Resistance Training Overload Progression Protocols on... (https://pubmed.ncbi.nlm.nih.gov/38286426/)\n- Relationship between protein intake and resistance-training-induced... (https://examine.com/research-feed/study/0AKVbd/)\n- Nutritional interventions in muscle hypertrophy research ... (https://pmc.ncbi.nlm.nih.gov/articles/PMC12317481/)\n- Dietary-energy/ protein Optimum For N-balance And Muscle ... (https://www.researchgate.net/publication/246653767_Dietary-energyprotein_Optimum_For_N-balance_And_Muscle_Hypertrophy_During_Two_Weeks_Of_Resistance_Training_2318)\n- How much protein do you really need to get strong? (https://www.bbc.com/future/article/20250212-how-much-protein-do-you-really-need-to-get-strong)\n- Protein Intake — How Much Protein Should You Eat per Day? (https://www.healthline.com/nutrition/how-much-protein-per-day)\n- Protein Requirements by Age: A Complete Guide – StrengthLog (https://www.strengthlog.com/protein-requirements-by-age/)\n\n## Information Gaps\n- Highly individualized long-term studies on specific chest hypertrophy programming responses\n- Comparative studies on the efficacy of various 'unorthodox' advanced chest exercises versus traditional ones in the long term"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-ef4ffdd9-1df8-4178-bd6c-a012c70ee04b",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "5f1e3be9-e863-4dbf-8201-3f34ba894cf1",
+      "timestamp": 1764530063.909137
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "# Research Report: chest and hypertrophy\n\n## Executive Summary\nAchieving chest hypertrophy requires adherence to science-based training principles, including optimal exercise selection, adequate training volume, and the application of progressive overload. Advanced training techniques and sufficient protein intake are also critical components for maximizing muscle growth. Reputable sources provide comprehensive guidance on program design and nutritional strategies.\n\n## Key Findings\n- **Training Principles:** Effective chest hypertrophy training involves science-based principles, focusing on exercise selection, appropriate training volume, and frequency. High-quality sources recommend structured programming to maximize development.\n- **Exercise Selection:** Prioritizing exercises that effectively stimulate chest muscles is crucial. Specific exercises can target different areas of the chest (e.g., lower chest), and a variety of movements contribute to overall development.\n- **Advanced Training Techniques:** Advanced techniques can further enhance chest muscle growth. Systematic reviews and science-backed guides confirm the efficacy of various advanced resistance training methods for hypertrophy.\n- **Progressive Overload and Long-Term Progression:** Progressive overload is fundamental for long-term chest hypertrophy, requiring systematic increases in training stimulus. Recent research directly compares different progressive overload protocols and strategies for maximizing gains.\n- **Nutrition (Protein Intake):** Optimal protein intake is essential for supporting muscle protein synthesis and facilitating chest muscle hypertrophy. Scientific recommendations provide specific daily protein requirements (g/kg/day) and guidance on intake per meal for muscle growth.\n\n## Sources\n- Complete Chest Training Guide | RP Strength (https://rpstrength.com/blogs/articles/chest-hypertrophy-training-tips)\n- Best Chest Exercises For Hypertrophy | Barbell Medicine (barbellmedicine.com)\n- Quick Reads: Best Way to Train for Chest Hypertrophy | BOXROX (boxrox.com)\n- How to Design a Hypertrophy Chest Workout | OPEX Fitness (opexfit.com)\n- Best Hypertrophy Chest Workout | Men's Journal - Men's Journal (mensjournal.com)\n- The 10 Best Chest Exercises for Muscle & Strength – StrengthLog (strengthlog.com)\n- Learn how to perform the best exercises targeting your Chest . | Fitbod (fitbod.me)\n- 8 Unorthodox Exercises to Force Chest Muscle Growth | BOXROX (boxrox.com)\n- Best Lower Chest Workout | 8 Best Exercises | ATHLEAN-X (learn.athleanx.com)\n- 8 Advanced Chest Training Techniques for Maximum Growth | BOXROX (boxrox.com)\n- Chest Workout Program for Mass: 7 Best Pec Exercises | Legion (legionathletics.com)\n- Maximizing Muscle Hypertrophy: A Systematic Review of Advanced ... (https://pmc.ncbi.nlm.nih.gov/articles/PMC6950543/)\n- 5 Advanced Chest Workouts Using Proven Scientific Techniques (https://www.muscleandstrength.com/articles/5-advanced-chest-workouts-using-scientific-proven-techniques)\n- Complete Chest Training Guide - RP Strength (https://rpstrength.com/blogs/articles/chest-hypertrophy-training-tips)\n- Progressive overload - Wikipedia (https://en.wikipedia.org/wiki/Progressive_overload)\n- When to Use Specific Progressive Overload Strategies • Stronger by... (https://www.strongerbyscience.com/progressive-overload-strategies/)\n- Effects of Resistance Training Overload Progression Protocols on... (https://pubmed.ncbi.nlm.nih.gov/38286426/)\n- Relationship between protein intake and resistance-training-induced... (https://examine.com/research-feed/study/0AKVbd/)\n- Nutritional interventions in muscle hypertrophy research ... (https://pmc.ncbi.nlm.nih.gov/articles/PMC12317481/)\n- Dietary-energy/ protein Optimum For N-balance And Muscle ... (https://www.researchgate.net/publication/246653767_Dietary-energyprotein_Optimum_For_N-balance_And_Muscle_Hypertrophy_During_Two_Weeks_Of_Resistance_Training_2318)\n- How much protein do you really need to get strong? (https://www.bbc.com/future/article/20250212-how-much-protein-do-you-really-need-to-get-strong)\n- Protein Intake — How Much Protein Should You Eat per Day? (https://www.healthline.com/nutrition/how-much-protein-per-day)\n- Protein Requirements by Age: A Complete Guide – StrengthLog (https://www.strengthlog.com/protein-requirements-by-age/)\n\n## Information Gaps\n- Highly individualized long-term studies on specific chest hypertrophy programming responses\n- Comparative studies on the efficacy of various 'unorthodox' advanced chest exercises versus traditional ones in the long term"
+          }
+        ],
+        "role": "model"
+      },
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 14971
+          }
+        ],
+        "cachedContentTokenCount": 14971,
+        "candidatesTokenCount": 1057,
+        "promptTokenCount": 19801,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 19801
+          }
+        ],
+        "totalTokenCount": 20858
+      },
+      "invocationId": "e-ef4ffdd9-1df8-4178-bd6c-a012c70ee04b",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "2fabd3ff-df43-43b8-80af-05cc84eda60d",
+      "timestamp": 1764530070.348934
+    },
+    {
+      "invocationId": "e-ef4ffdd9-1df8-4178-bd6c-a012c70ee04b",
+      "author": "research_coordinator",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {},
+        "endOfAgent": true
+      },
+      "id": "fbb0bd99-1093-4304-895f-3d2d50ddc2c2",
+      "timestamp": 1764530070.352511
+    }
+  ],
+  "lastUpdateTime": 1764530070.352511
+}

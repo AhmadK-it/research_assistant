@@ -1,0 +1,568 @@
+/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/google/adk/cli/fast_api.py:130: UserWarning: [EXPERIMENTAL] InMemoryCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  credential_service = InMemoryCredentialService()
+/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/google/adk/auth/credential_service/in_memory_credential_service.py:33: UserWarning: [EXPERIMENTAL] BaseCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__()
+INFO:     Started server process [1816764]
+INFO:     Waiting for application startup.
+
++-----------------------------------------------------------------------------+
+| ADK Web Server started                                                      |
+|                                                                             |
+| For local testing, access at http://127.0.0.1:8000.                         |
++-----------------------------------------------------------------------------+
+
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:49184 - "GET /dev-ui/?app=research_agent&session=52df562b-cd12-455e-b23a-1db5c98a3521&userId=user HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49184 - "GET /dev-ui/assets/config/runtime-config.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49184 - "GET /list-apps?relative_path=./ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49184 - "GET /apps/research_agent/users/user/sessions/52df562b-cd12-455e-b23a-1db5c98a3521 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49192 - "GET /builder/app/research_agent?ts=1764529729635 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49192 - "GET /apps/research_agent/eval_sets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49184 - "GET /apps/research_agent/eval_results HTTP/1.1" 200 OK
+2025-11-30 22:08:50,182 - INFO - adk_web_server.py:605 - New session created: 13665308-82e2-4c0f-bf72-6fe707c3c33c
+INFO:     127.0.0.1:49184 - "POST /apps/research_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49184 - "GET /apps/research_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49184 - "GET /apps/research_agent/users/user/sessions/13665308-82e2-4c0f-bf72-6fe707c3c33c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49184 - "GET /apps/research_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49184 - "GET /debug/trace/session/13665308-82e2-4c0f-bf72-6fe707c3c33c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49474 - "POST /run_sse HTTP/1.1" 200 OK
+2025-11-30 22:08:57,259 - INFO - envs.py:47 - Loaded .env file for research_agent at /home/ahkhadour/code/python/Courses/AI-Agents-5Days/research_assistant/research_agent/.env
+2025-11-30 22:08:57,260 - INFO - envs.py:47 - Loaded .env file for research_agent at /home/ahkhadour/code/python/Courses/AI-Agents-5Days/research_assistant/research_agent/.env
+2025-11-30 22:08:57 - InitHandler - INFO - Setting up retry configuration...
+2025-11-30 22:08:57,268 - INFO - init_handler.py:70 - Setting up retry configuration...
+2025-11-30 22:08:57 - InitHandler - INFO - Creating Search Agent...
+2025-11-30 22:08:57,281 - INFO - init_handler.py:146 - Creating Search Agent...
+2025-11-30 22:08:57 - InitHandler - INFO - Creating Quality Agent...
+2025-11-30 22:08:57,281 - INFO - init_handler.py:154 - Creating Quality Agent...
+2025-11-30 22:08:57 - InitHandler - INFO - Creating Gap Agent...
+2025-11-30 22:08:57,282 - INFO - init_handler.py:161 - Creating Gap Agent...
+2025-11-30 22:08:57 - InitHandler - INFO - Creating Synthesis Agent...
+2025-11-30 22:08:57,282 - INFO - init_handler.py:169 - Creating Synthesis Agent...
+2025-11-30 22:08:57 - InitHandler - INFO - Creating Search+Quality Pipeline (SequentialAgent)...
+2025-11-30 22:08:57,282 - INFO - init_handler.py:180 - Creating Search+Quality Pipeline (SequentialAgent)...
+2025-11-30 22:08:57 - ResearchAssistant.Pipeline - INFO - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:08:57,282 - INFO - search_quality_pipeline.py:80 - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:08:57 - ResearchAssistant.Pipeline - INFO - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:08:57,283 - INFO - search_quality_pipeline.py:112 - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:08:57 - InitHandler - INFO - Creating Parallel Gap Agent (ParallelAgent with 3 slots)...
+2025-11-30 22:08:57,283 - INFO - init_handler.py:192 - Creating Parallel Gap Agent (ParallelAgent with 3 slots)...
+2025-11-30 22:08:57 - ResearchAssistant.ParallelGapAgent - INFO - 🔧 Creating ParallelAgent with 3 fixed slots...
+2025-11-30 22:08:57,283 - INFO - parallel_gap_agent.py:81 - 🔧 Creating ParallelAgent with 3 fixed slots...
+2025-11-30 22:08:57 - ResearchAssistant.Pipeline - INFO - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:08:57,283 - INFO - search_quality_pipeline.py:80 - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:08:57 - ResearchAssistant.Pipeline - INFO - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:08:57,283 - INFO - search_quality_pipeline.py:112 - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:08:57 - ResearchAssistant.ParallelGapAgent - INFO -   ✓ Created pipeline slot 1
+2025-11-30 22:08:57,283 - INFO - parallel_gap_agent.py:95 -   ✓ Created pipeline slot 1
+2025-11-30 22:08:57 - ResearchAssistant.Pipeline - INFO - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:08:57,283 - INFO - search_quality_pipeline.py:80 - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:08:57 - ResearchAssistant.Pipeline - INFO - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:08:57,284 - INFO - search_quality_pipeline.py:112 - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:08:57 - ResearchAssistant.ParallelGapAgent - INFO -   ✓ Created pipeline slot 2
+2025-11-30 22:08:57,284 - INFO - parallel_gap_agent.py:95 -   ✓ Created pipeline slot 2
+2025-11-30 22:08:57 - ResearchAssistant.Pipeline - INFO - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:08:57,284 - INFO - search_quality_pipeline.py:80 - Creating Search+Quality SequentialAgent Pipeline...
+2025-11-30 22:08:57 - ResearchAssistant.Pipeline - INFO - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:08:57,284 - INFO - search_quality_pipeline.py:112 - ✅ Search+Quality Pipeline created (SequentialAgent)
+2025-11-30 22:08:57 - ResearchAssistant.ParallelGapAgent - INFO -   ✓ Created pipeline slot 3
+2025-11-30 22:08:57,284 - INFO - parallel_gap_agent.py:95 -   ✓ Created pipeline slot 3
+2025-11-30 22:08:57 - ResearchAssistant.ParallelGapAgent - INFO - ✅ ParallelAgent created with 3 sub-agents (static)
+2025-11-30 22:08:57,284 - INFO - parallel_gap_agent.py:120 - ✅ ParallelAgent created with 3 sub-agents (static)
+2025-11-30 22:08:57 - InitHandler - INFO - ✅ All agents created successfully
+2025-11-30 22:08:57,284 - INFO - init_handler.py:200 - ✅ All agents created successfully
+/home/ahkhadour/code/python/Courses/AI-Agents-5Days/research_assistant/research_agent/agent.py:248: UserWarning: [EXPERIMENTAL] ResumabilityConfig: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  resumability_config=ResumabilityConfig(is_resumable=True),
+2025-11-30 22:08:57 - ResearchAssistant - INFO - ============================================================
+2025-11-30 22:08:57,286 - INFO - agent.py:264 - ============================================================
+2025-11-30 22:08:57 - ResearchAssistant - INFO - RESEARCH AGENT INITIALIZED
+2025-11-30 22:08:57,287 - INFO - agent.py:265 - RESEARCH AGENT INITIALIZED
+2025-11-30 22:08:57 - ResearchAssistant - INFO - ============================================================
+2025-11-30 22:08:57,287 - INFO - agent.py:266 - ============================================================
+2025-11-30 22:08:57 - ResearchAssistant - INFO - App Name: research_agent
+2025-11-30 22:08:57,287 - INFO - agent.py:267 - App Name: research_agent
+2025-11-30 22:08:57 - ResearchAssistant - INFO - Resumability: True
+2025-11-30 22:08:57,287 - INFO - agent.py:268 - Resumability: True
+2025-11-30 22:08:57 - ResearchAssistant - INFO - Specialist Agents: search, quality, gap, synthesis
+2025-11-30 22:08:57,287 - INFO - agent.py:269 - Specialist Agents: search, quality, gap, synthesis
+2025-11-30 22:08:57 - ResearchAssistant - INFO - SequentialAgent: search_quality_pipeline
+2025-11-30 22:08:57,287 - INFO - agent.py:270 - SequentialAgent: search_quality_pipeline
+2025-11-30 22:08:57 - ResearchAssistant - INFO - ParallelAgent: parallel_gap_agent (3 fixed slots)
+2025-11-30 22:08:57,288 - INFO - agent.py:271 - ParallelAgent: parallel_gap_agent (3 fixed slots)
+2025-11-30 22:08:57 - ResearchAssistant - INFO - MCP Tool: DuckDuckGo Search
+2025-11-30 22:08:57,288 - INFO - agent.py:272 - MCP Tool: DuckDuckGo Search
+2025-11-30 22:08:57 - ResearchAssistant - INFO - Session Service: InMemorySessionService
+2025-11-30 22:08:57,288 - INFO - agent.py:273 - Session Service: InMemorySessionService
+2025-11-30 22:08:57 - ResearchAssistant - INFO - ============================================================
+2025-11-30 22:08:57,288 - INFO - agent.py:274 - ============================================================
+2025-11-30 22:08:57,453 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:09:00,550 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:09:00,551 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+INFO:     127.0.0.1:49474 - "GET /apps/research_agent/users/user/sessions/13665308-82e2-4c0f-bf72-6fe707c3c33c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44652 - "GET /debug/trace/session/13665308-82e2-4c0f-bf72-6fe707c3c33c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44652 - "GET /debug/trace/session/13665308-82e2-4c0f-bf72-6fe707c3c33c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44952 - "POST /run_sse HTTP/1.1" 200 OK
+2025-11-30 22:09:12,427 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+2025-11-30 22:09:14,020 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:09:14,356 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+
+
+╭──────────────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│                         ▄▀▀ ▄▀█ █▀▀ ▀█▀ █▀▄▀█ █▀▀ █▀█                        │
+│                         █▀  █▀█ ▄▄█  █  █ ▀ █ █▄▄ █▀▀                        │
+│                                                                              │
+│                                FastMCP 2.13.1                                │
+│                                                                              │
+│                                                                              │
+│                    🖥  Server name: Research Search Server                    │
+│                                                                              │
+│                    📦 Transport:   STDIO                                     │
+│                                                                              │
+│                    📚 Docs:        https://gofastmcp.com                     │
+│                    🚀 Hosting:     https://fastmcp.cloud                     │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+
+[11/30/25 22:09:17] INFO     Starting MCP server 'Research Search server.py:1971
+                             Server' with transport 'stdio'                     
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/google/adk/tools/mcp_tool/mcp_tool.py:101: UserWarning: [EXPERIMENTAL] BaseAuthenticatedTool: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__(
+2025-11-30 22:09:17,298 - INFO - types.py:2165 - 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2025-11-30 22:09:17,366 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:09:21,010 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:09:21,010 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call', 'thought_signature', 'function_call', 'function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'chest hypertrophy principles'
+INFO:primp:response: https://search.brave.com/search?q=chest+hypertrophy+principles&source=web 429
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=chest%20hypertrophy%20principles 200
+INFO:primp:response: https://yandex.com/search/site/?text=chest+hypertrophy+principles&web=1&searchid=5719652 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'best exercises for chest muscle growth'
+INFO:primp:response: https://yandex.com/search/site/?text=best+exercises+for+chest+muscle+growth&web=1&searchid=5375696 200
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=best%20exercises%20for%20chest%20muscle%20growth 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'how to maximize chest hypertrophy'
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=how%20to%20maximize%20chest%20hypertrophy 200
+INFO:primp:response: https://yandex.com/search/site/?text=how+to+maximize+chest+hypertrophy&web=1&searchid=6594348 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+2025-11-30 22:09:33,747 - INFO - types.py:2165 - 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2025-11-30 22:09:33,748 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:09:42,416 - INFO - google_llm.py:186 - Response received from the model.
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+2025-11-30 22:09:42,501 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:09:42,502 - INFO - models.py:6856 - AFC is enabled with max remote calls: 10.
+2025-11-30 22:10:02,453 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:10:02,464 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+2025-11-30 22:10:12,661 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:10:12,745 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash-lite, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:10:12,746 - INFO - models.py:6856 - AFC is enabled with max remote calls: 10.
+2025-11-30 22:10:16,249 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:10:16,257 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+2025-11-30 22:10:23,413 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call', 'thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:10:23,499 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:10:34,431 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:10:34,432 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call', 'thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:10:34,520 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:10:34,521 - INFO - models.py:6856 - AFC is enabled with max remote calls: 10.
+2025-11-30 22:10:38,259 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:10:38,263 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:10:41,190 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:10:41,197 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+2025-11-30 22:10:44,209 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:10:46,647 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:10:46 - HITL-Handler - INFO - ============================================================
+2025-11-30 22:10:46,652 - INFO - hitl_handler.py:207 - ============================================================
+2025-11-30 22:10:46 - HITL-Handler - INFO - HITL Handler: conduct_adaptive_gap_search invoked
+2025-11-30 22:10:46,653 - INFO - hitl_handler.py:208 - HITL Handler: conduct_adaptive_gap_search invoked
+2025-11-30 22:10:46 - HITL-Handler - INFO - Gaps received: 3
+2025-11-30 22:10:46,653 - INFO - hitl_handler.py:209 - Gaps received: 3
+2025-11-30 22:10:46 - HITL-Handler - INFO - ============================================================
+2025-11-30 22:10:46,653 - INFO - hitl_handler.py:210 - ============================================================
+2025-11-30 22:10:46 - HITL-Handler - INFO - ⏸️ First call - requesting user confirmation...
+2025-11-30 22:10:46,653 - INFO - hitl_handler.py:366 - ⏸️ First call - requesting user confirmation...
+/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/google/adk/tools/tool_context.py:92: UserWarning: [EXPERIMENTAL] ToolConfirmation: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  ToolConfirmation(
+2025-11-30 22:10:46 - HITL-Handler - INFO - 📋 Confirmation requested - awaiting user response
+2025-11-30 22:10:46,654 - INFO - hitl_handler.py:399 - 📋 Confirmation requested - awaiting user response
+INFO:     127.0.0.1:44952 - "GET /apps/research_agent/users/user/sessions/13665308-82e2-4c0f-bf72-6fe707c3c33c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42712 - "GET /debug/trace/session/13665308-82e2-4c0f-bf72-6fe707c3c33c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42712 - "GET /debug/trace/session/13665308-82e2-4c0f-bf72-6fe707c3c33c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36772 - "POST /run_sse HTTP/1.1" 200 OK
+2025-11-30 22:11:00,628 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+2025-11-30 22:11:04,944 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call', 'thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:11:04 - HITL-Handler - INFO - ============================================================
+2025-11-30 22:11:04,949 - INFO - hitl_handler.py:207 - ============================================================
+2025-11-30 22:11:04 - HITL-Handler - INFO - HITL Handler: conduct_adaptive_gap_search invoked
+2025-11-30 22:11:04,949 - INFO - hitl_handler.py:208 - HITL Handler: conduct_adaptive_gap_search invoked
+2025-11-30 22:11:04 - HITL-Handler - INFO - Gaps received: 3
+2025-11-30 22:11:04,950 - INFO - hitl_handler.py:209 - Gaps received: 3
+2025-11-30 22:11:04 - HITL-Handler - INFO - ============================================================
+2025-11-30 22:11:04,950 - INFO - hitl_handler.py:210 - ============================================================
+2025-11-30 22:11:04 - HITL-Handler - INFO - 🔍 Re-called after confirmation. user_decision=approved
+2025-11-30 22:11:04,950 - INFO - hitl_handler.py:304 - 🔍 Re-called after confirmation. user_decision=approved
+2025-11-30 22:11:04 - HITL-Handler - INFO - ✅ User APPROVED gap research (via user_decision parameter)
+2025-11-30 22:11:04,950 - INFO - hitl_handler.py:330 - ✅ User APPROVED gap research (via user_decision parameter)
+2025-11-30 22:11:04 - HITL-Handler - INFO -   Execution mode: parallel (max 3 concurrent)
+2025-11-30 22:11:04,950 - INFO - hitl_handler.py:333 -   Execution mode: parallel (max 3 concurrent)
+2025-11-30 22:11:04,956 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+2025-11-30 22:11:07,106 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+2025-11-30 22:11:07,129 - INFO - types.py:2165 - 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2025-11-30 22:11:07,199 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:11:07,204 - INFO - types.py:2165 - 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2025-11-30 22:11:07,272 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:11:07,276 - INFO - types.py:2165 - 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2025-11-30 22:11:07,342 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:11:10,789 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:11:10,789 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call', 'thought_signature', 'function_call', 'function_call', 'function_call', 'function_call', 'function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'advanced chest hypertrophy training techniques scientific evidence'
+2025-11-30 22:11:10,897 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:11:10,897 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call', 'thought_signature', 'function_call', 'function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=advanced%20chest%20hypertrophy%20training%20techniques%20scientific%20evidence 200
+2025-11-30 22:11:13,258 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:11:13,259 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call', 'thought_signature', 'function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+INFO:primp:response: https://www.mojeek.com/search?q=advanced+chest+hypertrophy+training+techniques+scientific+evidence 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'best chest exercises EMG activity hypertrophy'
+INFO:primp:response: https://www.bing.com/search?q=best+chest+exercises+EMG+activity+hypertrophy&pq=best+chest+exercises+EMG+activity+hypertrophy&cc=en 200
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=best%20chest%20exercises%20EMG%20activity%20hypertrophy 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'longitudinal studies chest hypertrophy training progression'
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=longitudinal%20studies%20chest%20hypertrophy%20training%20progression 200
+INFO:primp:response: https://www.bing.com/search?q=longitudinal+studies+chest+hypertrophy+training+progression&pq=longitudinal+studies+chest+hypertrophy+training+progression&cc=en 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'chest muscle growth programming long term studies'
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=chest%20muscle%20growth%20programming%20long%20term%20studies 200
+INFO:primp:response: https://www.mojeek.com/search?q=chest+muscle+growth+programming+long+term+studies 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'protein intake recommendations chest muscle hypertrophy'
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=protein%20intake%20recommendations%20chest%20muscle%20hypertrophy 200
+INFO:primp:response: https://search.brave.com/search?q=protein+intake+recommendations+chest+muscle+hypertrophy&source=web 429
+INFO:ddgs.ddgs:Error in engine bing: TimeoutException("Request timed out: RuntimeError('error sending request for url (https://yandex.com/search/site/?text=protein+intake+recommendations+chest+muscle+hypertrophy&web=1&searchid=6867027): operation timed out\\n\\nCaused by:\\n    operation timed out')")
+INFO:primp:response: https://www.bing.com/search?q=protein+intake+recommendations+chest+muscle+hypertrophy&pq=protein+intake+recommendations+chest+muscle+hypertrophy&cc=en 200
+INFO:httpx:HTTP Request: POST https://html.duckduckgo.com/html/ "HTTP/2 200 OK"
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'optimal protein timing chest growth studies'
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=optimal%20protein%20timing%20chest%20growth%20studies 200
+INFO:ddgs.ddgs:Error in engine yandex: TimeoutException("Request timed out: RuntimeError('error sending request for url (https://consent.yahoo.com/v2/collectConsent?sessionId=3_cc-session_b4d93054-1732-4c2a-a6eb-ba2d428c420a): operation timed out\\n\\nCaused by:\\n    operation timed out')")
+INFO:httpx:HTTP Request: POST https://html.duckduckgo.com/html/ "HTTP/2 200 OK"
+INFO:primp:response: https://yandex.com/search/site/?text=optimal+protein+timing+chest+growth+studies&web=1&searchid=8711804 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'advanced chest hypertrophy training techniques scientific basis'
+INFO:primp:response: https://yandex.com/search/site/?text=advanced+chest+hypertrophy+training+techniques+scientific+basis&web=1&searchid=8531222 200
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=advanced%20chest%20hypertrophy%20training%20techniques%20scientific%20basis 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'longitudinal studies chest hypertrophy programming progression'
+2025-11-30 22:11:46,732 - INFO - types.py:2165 - 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2025-11-30 22:11:46,733 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+INFO:primp:response: https://search.brave.com/search?q=longitudinal+studies+chest+hypertrophy+programming+progression&source=web 429
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=longitudinal%20studies%20chest%20hypertrophy%20programming%20progression 200
+INFO:primp:response: https://yandex.com/search/site/?text=longitudinal+studies+chest+hypertrophy+programming+progression&web=1&searchid=1160020 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'nutrition protein intake for muscle hypertrophy chest'
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=nutrition%20protein%20intake%20for%20muscle%20hypertrophy%20chest 200
+INFO:primp:response: https://search.brave.com/search?q=nutrition+protein+intake+for+muscle+hypertrophy+chest&source=web 429
+INFO:httpx:HTTP Request: POST https://html.duckduckgo.com/html/ "HTTP/2 200 OK"
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'advanced chest hypertrophy training scientific principles'
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=advanced%20chest%20hypertrophy%20training%20scientific%20principles 200
+INFO:httpx:HTTP Request: POST https://html.duckduckgo.com/html/ "HTTP/2 200 OK"
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'evidence-based chest muscle growth techniques research'
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=evidence-based%20chest%20muscle%20growth%20techniques%20research 200
+2025-11-30 22:12:07,789 - INFO - google_llm.py:186 - Response received from the model.
+INFO:ddgs.ddgs:Error in engine duckduckgo: TimeoutException("Request timed out: RuntimeError('error sending request for url (https://www.bing.com/search?q=evidence-based+chest+muscle+growth+techniques+research&pq=evidence-based+chest+muscle+growth+techniques+research&cc=en): operation timed out\\n\\nCaused by:\\n    operation timed out')")
+INFO:httpx:HTTP Request: POST https://html.duckduckgo.com/html/ "HTTP/2 200 OK"
+INFO:primp:response: https://search.brave.com/search?q=evidence-based+chest+muscle+growth+techniques+research&source=web 429
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+2025-11-30 22:12:11,613 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:12:11,614 - INFO - models.py:6856 - AFC is enabled with max remote calls: 10.
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+2025-11-30 22:12:11,622 - INFO - types.py:2165 - 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2025-11-30 22:12:11,623 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:12:11,631 - INFO - types.py:2165 - 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2025-11-30 22:12:11,632 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:12:15,372 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:12:15,373 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call', 'thought_signature', 'function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'longitudinal studies chest muscle hypertrophy training progression'
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=longitudinal%20studies%20chest%20muscle%20hypertrophy%20training%20progression 200
+INFO:primp:response: https://search.brave.com/search?q=longitudinal+studies+chest+muscle+hypertrophy+training+progression&source=web 429
+INFO:primp:response: https://www.bing.com/search?q=longitudinal+studies+chest+muscle+hypertrophy+training+progression&pq=longitudinal+studies+chest+muscle+hypertrophy+training+progression&cc=en 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'progressive overload chest hypertrophy long term studies'
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=progressive%20overload%20chest%20hypertrophy%20long%20term%20studies 200
+INFO:primp:response: https://yandex.com/search/site/?text=progressive+overload+chest+hypertrophy+long+term+studies&web=1&searchid=1690481 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+2025-11-30 22:12:24,539 - INFO - types.py:2165 - 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2025-11-30 22:12:24,541 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:12:27,773 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:12:27,773 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call', 'thought_signature', 'function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'optimal protein intake chest muscle hypertrophy research'
+2025-11-30 22:12:29,192 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:12:29,193 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=optimal%20protein%20intake%20chest%20muscle%20hypertrophy%20research 200
+INFO:primp:response: https://yandex.com/search/site/?text=optimal+protein+intake+chest+muscle+hypertrophy+research&web=1&searchid=5311065 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:__main__:MCP Server: Searching for 'daily protein requirements muscle growth scientific recommendations'
+INFO:primp:response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=daily%20protein%20requirements%20muscle%20growth%20scientific%20recommendations 200
+INFO:ddgs.ddgs:Error in engine yandex: TimeoutException("Request timed out: RuntimeError('error sending request for url (https://guce.yahoo.com/consent?brandType=nonEu&gcrumb=W7-wHTo&done=https%3A%2F%2Fsearch.yahoo.com%2Fsearch%3B_ylt%3DdDyVSy80DnvMWTzUr4koGzRI%3B_ylu%3D4jc4OwiOIRI_ggfBheb2M-4PyNXsYJX7r1B_wDnUjR4jsAU%3Fp%3Ddaily%2Bprotein%2Brequirements%2Bmuscle%2Bgrowth%2Bscientific%2Brecommendations): operation timed out\\n\\nCaused by:\\n    operation timed out')")
+INFO:primp:response: https://yandex.com/search/site/?text=daily+protein+requirements+muscle+growth+scientific+recommendations&web=1&searchid=3056800 200
+INFO:primp:response: https://www.mojeek.com/search?q=daily+protein+requirements+muscle+growth+scientific+recommendations 200
+INFO:__main__:MCP Server: Found 5 results
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+2025-11-30 22:12:38,224 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:12:38,225 - INFO - models.py:6856 - AFC is enabled with max remote calls: 10.
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+2025-11-30 22:12:38,234 - INFO - types.py:2165 - 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2025-11-30 22:12:38,235 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:12:51,083 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:12:54,450 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:12:54,451 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+2025-11-30 22:12:54,544 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:12:54,545 - INFO - models.py:6856 - AFC is enabled with max remote calls: 10.
+2025-11-30 22:13:10,898 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:13:44,483 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:13:44,498 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+2025-11-30 22:13:48,066 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:13:57,336 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:13:57,349 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:14:12,026 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:14:12,026 - WARNING - types.py:6324 - Warning: there are non-text parts in the response: ['function_call', 'thought_signature'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-30 22:14:12,031 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:14:12,031 - INFO - models.py:6856 - AFC is enabled with max remote calls: 10.
+2025-11-30 22:14:18,376 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:14:18,380 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-30 22:14:23,906 - INFO - google_llm.py:186 - Response received from the model.
+2025-11-30 22:14:23,914 - INFO - google_llm.py:133 - Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: True
+INFO:     127.0.0.1:36654 - "GET /apps/research_agent/users/user/sessions/13665308-82e2-4c0f-bf72-6fe707c3c33c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36670 - "GET /debug/trace/session/13665308-82e2-4c0f-bf72-6fe707c3c33c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36670 - "GET /debug/trace/session/13665308-82e2-4c0f-bf72-6fe707c3c33c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48532 - "GET /apps/research_agent/users/user/sessions/13665308-82e2-4c0f-bf72-6fe707c3c33c HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+
++-----------------------------------------------------------------------------+
+| ADK Web Server shutting down...                                             |
++-----------------------------------------------------------------------------+
+
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1816764]
+2025-11-30 22:17:33,708 - ERROR - base_events.py:1879 - an error occurred during closing of asynchronous generator <async_generator object stdio_client at 0x7fa44d1ba3b0>
+asyncgen: <async_generator object stdio_client at 0x7fa44d1ba3b0>
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 781, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/mcp/client/stdio/__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/mcp/client/stdio/__init__.py", line 183, in stdio_client
+    anyio.create_task_group() as tg,
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 787, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ahkhadour/code/python/Courses/AI-Agents-5Days/kaggle-env/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 459, in __exit__
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+
+Aborted!
+2025-11-30 22:17:34,036 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fa44cfe30e0>
+2025-11-30 22:17:34,043 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fa44c646350>
+2025-11-30 22:17:34,049 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fa44c678b90>
+2025-11-30 22:17:34,055 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fa44c646210>
+2025-11-30 22:17:34,458 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fa44c679d10>
+2025-11-30 22:17:34,458 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fa44c679bd0>
+2025-11-30 22:17:34,458 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fa44c67a0d0>
+2025-11-30 22:17:34,458 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fa44c645a90>
+2025-11-30 22:17:34,459 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fa44c678910>
+2025-11-30 22:17:34,459 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fa44cfe4a50>
+2025-11-30 22:17:34,459 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fa44c679090>
+2025-11-30 22:17:34,459 - ERROR - base_events.py:1879 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fa44c678f50>
