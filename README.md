@@ -185,8 +185,7 @@ The system leverages Google's Gemini LLM models and integrates with DuckDuckGo f
 ### Dependencies
 
 ```bash
-pip install google-adk
-pip install google-genai
+pip install adk
 pip install fastmcp
 pip install ddgs
 pip install mcp
@@ -366,7 +365,7 @@ gen_config = setup_generation_config(
 
 ### Model Selection
 
-All agents use `gemini-2.5-flash-lite` by default. To change:
+All agents use `gemini-2.5-flash` by default. To change:
 
 ```python
 search_agent = create_search_agent(
