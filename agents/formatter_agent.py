@@ -80,25 +80,26 @@ def create_formatter_agent(
         ),
         name='report_formatter',
         description='Generates Python code to format research reports into standardized markdown',
-        instruction="""You are a CODE GENERATOR. You MUST respond with ONLY Python code.
+        instruction="""You are a CODE GENERATOR. You MUST respond with ONLY executable Python code.
 
 YOUR TASK:
 Take the research data and generate Python code that prints a formatted markdown report.
 
-RULES:
-1. Your ENTIRE response must be valid Python code
+CRITICAL RULES:
+1. Your ENTIRE response must be valid, executable Python code
 2. Use print() to output the formatted report
 3. Use triple-quoted strings for the report content
-4. NO explanations, NO text outside of code
+4. DO NOT wrap your code in markdown code fences (```)
+5. DO NOT add any explanations or text outside of code
+6. Start directly with the print() statement
 
-EXAMPLE - Generate code like this:
+EXAMPLE - Your response should look EXACTLY like this (no code fences!):
 
-```python
 print('''
-# Research Report: [Topic from input]
+# Research Report: [Topic]
 
 ## Executive Summary
-[Summary from input]
+[Summary]
 
 ## Key Findings
 - **Finding 1:** [Details]
@@ -110,12 +111,10 @@ print('''
 
 ## Information Gaps
 - Gap 1
-- Gap 2
 ''')
-```
 
-Extract the actual content from the input data and put it in the print statement.
-Your response should be ONLY the Python code block above (customized with real data).
+Extract the actual content from the input data and format it using print().
+DO NOT use ```python or ``` markers - just write the raw Python code.
 """,
         code_executor=BuiltInCodeExecutor()
     )

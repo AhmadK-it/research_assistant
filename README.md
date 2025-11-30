@@ -3,7 +3,7 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![ADK](https://img.shields.io/badge/Google-ADK-green.svg)](https://github.com/google/adk-python)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Gemini](https://img.shields.io/badge/Gemini-2.5_Flash_Lite-blue.svg)](https://deepmind.google/technologies/gemini/)
+[![Gemini](https://img.shields.io/badge/Gemini-2.5_Flash-blue.svg)](https://deepmind.google/technologies/gemini/)
 
 An **autonomous multi-agent research orchestrator** built with Google's Agent Development Kit (ADK). This system implements a sophisticated 5-phase research workflow with Human-in-the-Loop (HITL) capabilities for conducting comprehensive web research.
 
@@ -15,31 +15,34 @@ An **autonomous multi-agent research orchestrator** built with Google's Agent De
 
 This project showcases **8+ key concepts** from the Google AI Agents Intensive:
 
-| Concept | Implementation | File(s) |
-|---------|---------------|---------|
-| **Multi-Agent Systems** | 5 specialist agents + 1 coordinator using AgentTool pattern | `agent.py`, `agents/*.py` |
-| **SequentialAgent** | Search+Quality pipeline chains 2 agents automatically | `agents/search_quality_pipeline.py` |
-| **AgentTool (Nested Agents)** | Synthesis → Formatter delegation with AgentTool | `agents/synthesis_agent.py` |
-| **BuiltInCodeExecutor** | Code-based report formatting in Formatter Agent | `agents/formatter_agent.py` |
-| **MCP (Model Context Protocol)** | DuckDuckGo search integration via FastMCP server | `mcp_server/search_server.py` |
-| **Human-in-the-Loop (HITL)** | User approval for gap research via `request_confirmation` | `tools/hitl_handler.py` |
-| **Session Management** | InMemorySessionService for conversation state | `agent.py` |
-| **Logging & Observability** | Structured logging with file output | `utils/logger.py` |
-| **Resumability** | ResumabilityConfig for long-running operations | `agent.py` |
-| **Gemini Models** | gemini-2.5-flash (main), gemini-2.5-flash-lite (lightweight) | Throughout |
+| Concept                                | Implementation                                              | File(s)                               |
+| -------------------------------------- | ----------------------------------------------------------- | ------------------------------------- |
+| **Multi-Agent Systems**          | 5 specialist agents + 1 coordinator using AgentTool pattern | `agent.py`, `agents/*.py`         |
+| **SequentialAgent**              | Search+Quality pipeline chains 2 agents automatically       | `agents/search_quality_pipeline.py` |
+| **AgentTool (Nested Agents)**    | Synthesis → Formatter delegation with AgentTool            | `agents/synthesis_agent.py`         |
+| **BuiltInCodeExecutor**          | Code-based report formatting in Formatter Agent             | `agents/formatter_agent.py`         |
+| **MCP (Model Context Protocol)** | DuckDuckGo search integration via FastMCP server            | `mcp_server/search_server.py`       |
+| **Human-in-the-Loop (HITL)**     | User approval for gap research via `request_confirmation` | `tools/hitl_handler.py`             |
+| **Session Management**           | InMemorySessionService for conversation state               | `agent.py`                          |
+| **Logging & Observability**      | Structured logging with file output                         | `utils/logger.py`                   |
+| **Resumability**                 | ResumabilityConfig for long-running operations              | `agent.py`                          |
+| **Gemini Models**                | gemini-2.5-flash (coordinator + agents)                     | Throughout                            |
 
 ---
 
 ## 🎯 The Journey: Problem → Solution
 
 ### The Problem
+
 Traditional research is time-consuming, involving:
+
 - Manual web searches across multiple sources
 - Subjective quality assessment of sources
 - Missing important information gaps
 - Tedious synthesis of findings
 
 ### The Solution: Multi-Agent Research Orchestration
+
 This system breaks research into **specialized phases**, each handled by an expert agent:
 
 ```
@@ -47,31 +50,27 @@ User Question
      │
      ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  Phase 1: SEARCH                                             │
-│  Search Agent → MCP → DuckDuckGo → Raw Results              │
+│  Phase 1+2: SEARCH + QUALITY (SequentialAgent Pipeline)      │
+│  Search Agent → Quality Agent → Scored Sources              │
+│  (Combined into single pipeline call)                        │
 └─────────────────────────────────────────────────────────────┘
      │
      ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  Phase 2: QUALITY                                            │
-│  Quality Agent → Evaluate credibility → Scored Sources      │
+│  Phase 3: GAP ANALYSIS + INITIAL SYNTHESIS                   │
+│  Gap Agent → Identify gaps → Synthesis Agent → Draft Report │
 └─────────────────────────────────────────────────────────────┘
      │
      ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  Phase 3: GAP ANALYSIS                                       │
-│  Gap Agent → Identify missing info → Gap List               │
+│  Phase 4: HITL + PARALLEL GAP RESEARCH                       │
+│  "Fill these gaps?" → [Yes] → ParallelAgent (3 slots)       │
+│                     → [No]  → Skip to Phase 5               │
 └─────────────────────────────────────────────────────────────┘
      │
      ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  Phase 4: HITL CONFIRMATION                                  │
-│  "Fill these gaps?" → [Yes] / [No] → User decides           │
-└─────────────────────────────────────────────────────────────┘
-     │
-     ▼
-┌─────────────────────────────────────────────────────────────┐
-│  Phase 5: SYNTHESIS                                          │
+│  Phase 5: FINAL SYNTHESIS                                    │
 │  Synthesis Agent → All sources → Professional Report        │
 └─────────────────────────────────────────────────────────────┘
      │
@@ -80,6 +79,7 @@ User Question
 ```
 
 ### Why This Architecture?
+
 1. **Separation of Concerns**: Each agent does one thing well
 2. **Quality Control**: Explicit filtering prevents garbage-in-garbage-out
 3. **Human Oversight**: HITL ensures user stays in control of research depth
@@ -145,15 +145,16 @@ The system leverages Google's Gemini LLM models and integrates with DuckDuckGo f
 │  │   └─ Quality Agent       │                                                │
 │  └─────────────────────────┘                                                │
 │                                                                              │
-│  ┌──────────┐  ┌────────────────────────────────────────────┐              │
-│  │   Gap    │  │           Synthesis Agent                   │              │
-│  │  Agent   │  │   └─ AgentTool(Formatter) ← BuiltInCode     │              │
-│  └──────────┘  └────────────────────────────────────────────┘              │
+│  ┌───────────────────────────────┐  ┌─────────────────────────────────────┐ │
+│  │  Parallel Gap Analysis        │  │        Synthesis Agent              │ │
+│  │  (ParallelAgent - 3 slots)    │  │   └─ AgentTool(Formatter)           │ │
+│  │   └─ Gap Agent ×3 parallel    │  │       └─ BuiltInCodeExecutor        │ │
+│  └───────────────────────────────┘  └─────────────────────────────────────┘ │
 │                                                                              │
 │       ▼                                                                      │
-│  ┌─────────────────────────────────────────────────────────────────────┐    │
-│  │                 MCP Server (DuckDuckGo Search)                       │    │
-│  └─────────────────────────────────────────────────────────────────────┘    │
+│  ┌─────────────────────────────────────────────────────────────────────────┐ │
+│  │                 MCP Server (DuckDuckGo Search)                          │ │
+│  └─────────────────────────────────────────────────────────────────────────┘ │
 └─────────────────────────────────────────────────────────────────────────────┘
                               │
                               ▼
@@ -165,11 +166,12 @@ The system leverages Google's Gemini LLM models and integrates with DuckDuckGo f
 
 ### Agent Composition Patterns Used
 
-| Pattern | Example | Description |
-|---------|---------|-------------|
-| **SequentialAgent** | `search_quality_pipeline` | Chains Search → Quality automatically |
-| **AgentTool** | `synthesis_agent` uses `AgentTool(formatter)` | Delegate to nested agent |
-| **BuiltInCodeExecutor** | `formatter_agent` | Execute code for formatting |
+| Pattern                       | Example                                           | Description                            |
+| ----------------------------- | ------------------------------------------------- | -------------------------------------- |
+| **SequentialAgent**     | `search_quality_pipeline`                       | Chains Search → Quality automatically |
+| **ParallelAgent**       | `parallel_gap_agent`                            | Runs 3 Gap Agent instances in parallel |
+| **AgentTool**           | `synthesis_agent` uses `AgentTool(formatter)` | Delegate to nested agent               |
+| **BuiltInCodeExecutor** | `formatter_agent`                               | Execute code for formatting            |
 
 ---
 
@@ -242,10 +244,10 @@ async for response in runner.run_async(
 
 ### Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `GOOGLE_API_KEY` | Google Gemini API key | ✅ Yes |
-| `AUTO_APPROVE_GAPS` | Set to `true` to skip HITL confirmation | ❌ No |
+| Variable              | Description                               | Required |
+| --------------------- | ----------------------------------------- | -------- |
+| `GOOGLE_API_KEY`    | Google Gemini API key                     | ✅ Yes   |
+| `AUTO_APPROVE_GAPS` | Set to `true` to skip HITL confirmation | ❌ No    |
 
 ---
 
@@ -288,46 +290,49 @@ research_agent/
 
 ## 🔄 Agent Workflow
 
-### Phase 1: Initial Search
-```
-User Query → Search Agent → DuckDuckGo (via MCP) → Search Results
-```
-The search agent generates 2-3 optimized queries and retrieves diverse sources.
+### Phase 1+2: Search + Quality (SequentialAgent Pipeline)
 
-### Phase 2: Quality Assessment
 ```
-Search Results → Quality Agent → Credibility Scores → Filtered Sources
+User Query → search_quality_pipeline → Scored Sources
+             ├─ Search Agent → DuckDuckGo (via MCP)
+             └─ Quality Agent → Credibility Scoring
 ```
+
+The `SequentialAgent` automatically chains Search → Quality in a single call.
 Each source is evaluated on:
+
 - **Credibility** (1-10): Publisher reputation
 - **Relevance** (1-10): Query alignment
 - **Recency**: Publication date
 
-### Phase 3A: Gap Identification
+### Phase 3: Gap Analysis + Initial Synthesis
+
 ```
-Filtered Sources → Gap Agent → Information Gaps
+Scored Sources → Gap Agent → Information Gaps
+All Results → Synthesis Agent → Draft Report
 ```
+
 Identifies gaps across 5 dimensions:
+
 - Temporal (missing recent data)
 - Topical (uncovered subtopics)
 - Methodological (missing data types)
 - Source (limited source diversity)
 - Practical (missing implementation details)
 
-### Phase 3B: Initial Synthesis
+### Phase 4: Adaptive Gap Research (HITL + ParallelAgent)
+
 ```
-All Results → Synthesis Agent → Draft Report
+Gaps → HITL Handler → User Approval → ParallelAgent (3 slots)
 ```
 
-### Phase 4: Adaptive Gap Research (HITL)
-```
-Gaps → HITL Handler → User Approval → Gap Research
-```
 User can:
-- ✅ **Approve** - Conduct additional research for identified gaps
+
+- ✅ **Approve** - `parallel_gap_agent` researches 3 gaps simultaneously
 - ❌ **Reject** - Proceed with available information
 
 ### Phase 5: Final Synthesis
+
 ```
 All Results + Gap Research → Synthesis Agent → Final Report
 ```
@@ -377,21 +382,21 @@ search_agent = create_search_agent(
 
 ### Agents
 
-| Agent | Type | Description | Tools/Sub-agents |
-|-------|------|-------------|------------------|
-| `root_agent` | LlmAgent | Research orchestrator | All specialist agents + pipeline |
+| Agent                       | Type                      | Description             | Tools/Sub-agents                    |
+| --------------------------- | ------------------------- | ----------------------- | ----------------------------------- |
+| `root_agent`              | LlmAgent                  | Research orchestrator   | All specialist agents + pipeline    |
 | `search_quality_pipeline` | **SequentialAgent** | Combined search+quality | search_specialist, quality_assessor |
-| `search_specialist` | LlmAgent | Web search execution | MCP DuckDuckGo |
-| `quality_assessor` | LlmAgent | Source evaluation | None |
-| `gap_identifier` | LlmAgent | Gap analysis | None |
-| `research_synthesizer` | LlmAgent | Report synthesis | AgentTool(formatter) |
-| `formatter_agent` | LlmAgent | Code-based formatting | BuiltInCodeExecutor |
+| `search_specialist`       | LlmAgent                  | Web search execution    | MCP DuckDuckGo                      |
+| `quality_assessor`        | LlmAgent                  | Source evaluation       | None                                |
+| `gap_identifier`          | LlmAgent                  | Gap analysis            | None                                |
+| `research_synthesizer`    | LlmAgent                  | Report synthesis        | AgentTool(formatter)                |
+| `formatter_agent`         | LlmAgent                  | Code-based formatting   | BuiltInCodeExecutor                 |
 
 ### Tools
 
-| Tool | Description |
-|------|-------------|
-| `duckduckgo_search` | MCP tool for web searches |
+| Tool                            | Description                    |
+| ------------------------------- | ------------------------------ |
+| `duckduckgo_search`           | MCP tool for web searches      |
 | `conduct_adaptive_gap_search` | HITL approval for gap research |
 
 ### Key Functions
@@ -429,6 +434,7 @@ from research_agent.agent import (
 ### Adding New Search Tools
 
 1. Create a new MCP tool in `mcp_server/`:
+
 ```python
 @mcp.tool()
 def custom_search(query: str) -> List[Dict]:
@@ -492,8 +498,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 For questions or issues:
+
 - 📧 Open an issue on GitHub
-- 💬 Check the [discussions](../../discussions) page
 
 ---
 

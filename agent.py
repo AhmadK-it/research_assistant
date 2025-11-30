@@ -46,6 +46,8 @@ MCP_SERVER_PATH = os.path.join(
     "search_server.py"
 )
 
+Model = 'gemini-2.5-flash'
+
 search_tool = McpToolset(
     connection_params=StdioConnectionParams(
         server_params=StdioServerParameters(
@@ -69,7 +71,7 @@ retry_config = setup_retry_config()
 generation_config = setup_generation_config()
 
 agents = create_all_agents(
-    model='gemini-2.5-flash',
+    model=Model,
     retry_config=retry_config,
     search_toolset=search_tool,
     generation_config=generation_config
@@ -104,7 +106,7 @@ session_service = InMemorySessionService()
 
 _root_agent = LlmAgent(
     model=Gemini(
-        model='gemini-2.5-flash', 
+        model=Model, 
         retry_options=retry_config,
         generation_config=generation_config
     ),
