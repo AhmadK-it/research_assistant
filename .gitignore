@@ -9,6 +9,7 @@ develop-eggs/
 dist/
 downloads/
 PRESENTATION.md
+HELPER_FUNCTIONS.md
 eggs/
 .eggs/
 lib/
@@ -54,3 +55,4 @@ Thumbs.db
 
 # MCP and Memory
 memory/
+HELPER_FUNCTIONS.*

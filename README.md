@@ -4,10 +4,13 @@
 [![ADK](https://img.shields.io/badge/Google-ADK-green.svg)](https://github.com/google/adk-python)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Gemini](https://img.shields.io/badge/Gemini-2.5_Flash-blue.svg)](https://deepmind.google/technologies/gemini/)
+[![YouTube Playlist](https://img.shields.io/badge/YouTube-Code_Explanation-red.svg)](https://youtube.com/playlist?list=PLFedTgVVfzghcDExHObPYOtgu6khsesyk&si=b6Hm-UqhG3_RgsAo)
 
 An **autonomous multi-agent research orchestrator** built with Google's Agent Development Kit (ADK). This system implements a sophisticated 5-phase research workflow with Human-in-the-Loop (HITL) capabilities for conducting comprehensive web research.
 
 > **📚 Course Capstone Project**: This project was developed for the **Google AI Agents Intensive (Nov 2025)** as a demonstration of multi-agent architectures, MCP integration, and agentic design patterns.
+>
+> **🎬 Code Explanation**: Watch the full code walkthrough on [YouTube Playlist](https://youtube.com/playlist?list=PLFedTgVVfzghcDExHObPYOtgu6khsesyk&si=b6Hm-UqhG3_RgsAo)
 
 ---
 
